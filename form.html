@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Sedona-mobile</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+
+
+
+
+
+	<header class="page-header">
+		<a id="nav-toggle" href="#"><span></span></a>
+		<nav class="page-navigation">
+			<ul>
+				<li><a href="#">Карта штата</a></li>
+				<li class="active"><a href="#">Информация</a></li>
+				<li><a href="#">Фото и видео</a></li>
+				<li><a href="#">Гостиницы</a></li>
+				<li><a class="logo" alt="logo">City of Sedona</a></li> 
+			</ul>
+		</nav>
+	</header>
+
+
+
+
+
+	<main>
+	    <section class="intro">
+			<div class="banner">
+		       <div class="banner-inside"></div> 
+		    </div>
+		    <div class="">
+	            <h2>Оставьте свой отзыв</h2>
+	            <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+		    </div>
+	    </section>
+
+
+
+	    <form action=""  method="post">
+	    
+			<fieldset>
+				<legend>Представьтесь, пожалуйста:</legend>
+				<div>
+					<label for="surname">Фамилия</label>
+					<input type="text" id="surname" name="user_surname" required placeholder="Иванов">
+				</div>
+				<div>
+					<label for="name">Имя</label>
+					<input type="text"  id="name" name="user_name" required placeholder="Петр">
+				</div>
+				<div>
+					<label for="secondname">Отчество</label>
+					<input type="text" id="secondname" name="user_secondname" placeholder="Александрович">
+				</div>
+			</fieldset>
+
+
+			<fieldset>
+				<legend>Ваше общее впечатление:</legend>
+				<div>
+	                <input type="radio" id="plus" name="talk_about">
+	                <label for="plus">Скорее положительное</label>	
+				</div>
+                <div>
+	                <input type="radio" id="minus" name="talk_about">
+	                <label for="minus">Скорее отрицательное</label>                	
+                </div>
+
+			</fieldset>
+
+
+			<fieldset>
+				<legend>Даты вашей поездки:</legend>
+				<div>
+	                <label for="arrive">дата приезда:</label>
+	                <input type="date" id="arrive" class="calendar" required value="4 июля 2015">
+				</div>
+				<div>
+	                <label for="vocation">длительность пребывания:</label>
+	                <input type="number" id="vocation"  min="1" max="30" required value="14">
+				</div>
+				<div>
+	                <label for="depart">дата отъезда:</label>
+	                <input type="date" id="depart" class="calendar" required value="28 июля 2015">
+				</div>
+			</fieldset>
+
+
+			<fieldset>
+				<legend>кол-во путешественников:</legend>
+				<div>
+	                <label for="vocation">количество путешественников:</label>
+	                <input type="number" id="vocation"  min="1" max="5" required value="2">
+				</div>
+
+				<table>
+				  <tr>
+				    <td>№</td>
+				    <td><label  for="user_surname">Фамилия</label></td>
+				  </tr>
+  				  <tr>
+				    <td>1</td>
+				    <td><input type="text" id="surname" name="user_surname" required placeholder="Иванов"></td>
+				  </tr>
+  				  <tr>
+				    <td></td>
+				    <td><label for="name">Имя</label></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td><input type="text" id="name" name="user_name" required placeholder="Петр"></td>
+				  </tr>
+  				  <tr>
+				    <td></td>
+				    <td><label for="secondname">Отчество</label></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td><input type="text" id="secondname" name="user_secondname" placeholder="Александрович"></td>
+				  </tr>
+				</table>
+
+
+				<table>
+				  <tr>
+				    <td>№</td>
+				    <td><label  for="user_surname">Фамилия</label></td>
+				  </tr>
+  				  <tr>
+				    <td>2</td>
+				    <td><input type="text" id="surname" name="user_surname" required placeholder="Иванов"></td>
+				  </tr>
+  				  <tr>
+				    <td></td>
+				    <td><label for="name">Имя</label></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td><input type="text" id="name" name="user_name" required placeholder="Петр"></td>
+				  </tr>
+  				  <tr>
+				    <td></td>
+				    <td><label for="secondname">Отчество</label></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td><input type="text" id="secondname" name="user_secondname" placeholder="Александрович"></td>
+				  </tr>
+				</table>
+			</fieldset>
+
+
+			<fieldset>
+				<legend>посещенные достопримечательности:</legend>
+				<div>
+			        <input type="checkbox" id="bridge" name="user_interest" checked>
+			        <label for="bridge">Мост Дьявола</label>
+				</div>
+				<div>
+			        <input type="checkbox" id="park" name="user_interest">
+			        <label for="park">Слайд-парк</label>
+				</div>
+				<div>
+			        <input type="checkbox" id="mountin" name="user_interest" checked>
+			        <label for="mountin">Гора-Колокол</label>
+				</div>
+				<div>
+			        <input type="checkbox" id="rock" name="user_interest" checked>
+			        <label for="rock">Красные скалы</label>
+				</div>
+			</fieldset>
+	    </form>
+
+
+	    <div class="failure-popup">
+	    	<h2>Что-то пошло не так!</h2>
+	    	<p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+	    	<button type="submit">ok</button>
+	    </div>
+
+
+	    <div class="success popup">
+	    	<h2>Ваш отзыв отправлен!</h2>
+	    	<p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+	    	<button type="submit">Закрыть окно</button>
+	    </div>
+
+	    <div>
+	    	<h2>Загрузите фотографии:</h2>
+	    	<!-- нужна подсказка: как верстать загрузку фотографий с сайта -->
+	    	<button type="">Выбрать фотографии</button>
+	    	<ul class="gallery">
+				<li class="crop"> <!-- class="crop" - привести фотографии к одному размеру -->
+					<img src="" alt="">
+				</li>
+				<li class="crop">
+					<img src="" alt="">
+				</li>
+				<li class="crop">
+					<img src="" alt="">
+				</li>
+				<li class="crop">
+					<img src="" alt="">
+				</li>
+				<li class="crop">
+					<img src="" alt="">
+				</li>
+				<li class="crop">
+					<img src="" alt="">
+				</li>
+				<li class="crop">
+					<img src="" alt="">
+				</li>
+	    	</ul>
+	    </div>
+	    <button type="submit">Отправить отзыв</button>
+	</main>
+
+
+
+     <footer class="page-footer">
+		<a class="" href="#">#visitsedona</a>
+
+		<div class="footer_social">
+			<a href="#"><i class="icon icon-tw"></i><span>twitter</span></a>
+			<a href="#"><i class="icon icon-facebook"></i><span>facebook</span></a>
+			<a href="#"><i class="icon icon-youtube"></i><span>youtube</span></a>
+		</div>
+
+		<a class="htmlacademy" href="#">Разработано
+			<img class="" src="">
+		</a>
+
+	</footer>
+
+
+
+
+
+</body>
+</html>
