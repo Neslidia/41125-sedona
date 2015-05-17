@@ -1,244 +1,233 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Sedona-mobile</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sedona-mobile</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
 
 
 
-
-
-	<header class="page-header">
+<header class="page-header">
+	<div class="page-header__inside">
 		<a id="nav-toggle" href="#"><span></span></a>
-		<nav class="page-navigation">
-			<ul>
+		<nav class="page-nav">
+			<ul class="page-nav__list">
 				<li><a href="#">Карта штата</a></li>
-				<li class="active"><a href="#">Информация</a></li>
+				<li><a href="#">Информация</a></li>
 				<li><a href="#">Фото и видео</a></li>
 				<li><a href="#">Гостиницы</a></li>
-				<li><a class="logo" alt="logo">City of Sedona</a></li> 
+				<li class="page-nav__logo">
+					<a href="#">
+						<img src="" alt="City of Sedona">
+					</a>
+				</li> 
 			</ul>
 		</nav>
-	</header>
+	</div>
+</header>	
 
 
 
-
-
-	<main>
-	    <section class="intro">
-			<div class="banner">
-		       <div class="banner-inside"></div> 
-		    </div>
-		    <div class="">
-	            <h2>Оставьте свой отзыв</h2>
-	            <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-		    </div>
-	    </section>
-
-
-
-	    <form action=""  method="post">
-	    
-			<fieldset>
-				<legend>Представьтесь, пожалуйста:</legend>
-				<div>
-					<label for="surname">Фамилия</label>
-					<input type="text" id="surname" name="user_surname" required placeholder="Иванов">
-				</div>
-				<div>
-					<label for="name">Имя</label>
-					<input type="text"  id="name" name="user_name" required placeholder="Петр">
-				</div>
-				<div>
-					<label for="secondname">Отчество</label>
-					<input type="text" id="secondname" name="user_secondname" placeholder="Александрович">
-				</div>
-			</fieldset>
-
-
-			<fieldset>
-				<legend>Ваше общее впечатление:</legend>
-				<div>
-	                <input type="radio" id="plus" name="talk_about">
-	                <label for="plus">Скорее положительное</label>	
-				</div>
-                <div>
-	                <input type="radio" id="minus" name="talk_about">
-	                <label for="minus">Скорее отрицательное</label>                	
-                </div>
-
-			</fieldset>
-
-
-			<fieldset>
-				<legend>Даты вашей поездки:</legend>
-				<div>
-	                <label for="arrive">дата приезда:</label>
-	                <input type="date" id="arrive" class="calendar" required value="4 июля 2015">
-				</div>
-				<div>
-	                <label for="vocation">длительность пребывания:</label>
-	                <input type="number" id="vocation"  min="1" max="30" required value="14">
-				</div>
-				<div>
-	                <label for="depart">дата отъезда:</label>
-	                <input type="date" id="depart" class="calendar" required value="28 июля 2015">
-				</div>
-			</fieldset>
-
-
-			<fieldset>
-				<legend>кол-во путешественников:</legend>
-				<div>
-	                <label for="vocation">количество путешественников:</label>
-	                <input type="number" id="vocation"  min="1" max="5" required value="2">
-				</div>
-
-				<table>
-				  <tr>
-				    <td>№</td>
-				    <td><label  for="user_surname">Фамилия</label></td>
-				  </tr>
-  				  <tr>
-				    <td>1</td>
-				    <td><input type="text" id="surname" name="user_surname" required placeholder="Иванов"></td>
-				  </tr>
-  				  <tr>
-				    <td></td>
-				    <td><label for="name">Имя</label></td>
-				  </tr>
-				  <tr>
-				    <td></td>
-				    <td><input type="text" id="name" name="user_name" required placeholder="Петр"></td>
-				  </tr>
-  				  <tr>
-				    <td></td>
-				    <td><label for="secondname">Отчество</label></td>
-				  </tr>
-				  <tr>
-				    <td></td>
-				    <td><input type="text" id="secondname" name="user_secondname" placeholder="Александрович"></td>
-				  </tr>
-				</table>
-
-
-				<table>
-				  <tr>
-				    <td>№</td>
-				    <td><label  for="user_surname">Фамилия</label></td>
-				  </tr>
-  				  <tr>
-				    <td>2</td>
-				    <td><input type="text" id="surname" name="user_surname" required placeholder="Иванов"></td>
-				  </tr>
-  				  <tr>
-				    <td></td>
-				    <td><label for="name">Имя</label></td>
-				  </tr>
-				  <tr>
-				    <td></td>
-				    <td><input type="text" id="name" name="user_name" required placeholder="Петр"></td>
-				  </tr>
-  				  <tr>
-				    <td></td>
-				    <td><label for="secondname">Отчество</label></td>
-				  </tr>
-				  <tr>
-				    <td></td>
-				    <td><input type="text" id="secondname" name="user_secondname" placeholder="Александрович"></td>
-				  </tr>
-				</table>
-			</fieldset>
-
-
-			<fieldset>
-				<legend>посещенные достопримечательности:</legend>
-				<div>
-			        <input type="checkbox" id="bridge" name="user_interest" checked>
-			        <label for="bridge">Мост Дьявола</label>
-				</div>
-				<div>
-			        <input type="checkbox" id="park" name="user_interest">
-			        <label for="park">Слайд-парк</label>
-				</div>
-				<div>
-			        <input type="checkbox" id="mountin" name="user_interest" checked>
-			        <label for="mountin">Гора-Колокол</label>
-				</div>
-				<div>
-			        <input type="checkbox" id="rock" name="user_interest" checked>
-			        <label for="rock">Красные скалы</label>
-				</div>
-			</fieldset>
-	    </form>
-
-
-	    <div class="failure-popup">
-	    	<h2>Что-то пошло не так!</h2>
-	    	<p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-	    	<button type="submit">ok</button>
+<main class="page-main">
+  <div class="banner">
+		<div class="banner__inside">
+	    <div class="banner__pic">
+	      <img src="" alt="Sedona">
+	      <img class="mask" src="" alt="">
 	    </div>
+    </div>
+  </div>
 
 
-	    <div class="success popup">
-	    	<h2>Ваш отзыв отправлен!</h2>
-	    	<p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-	    	<button type="submit">Закрыть окно</button>
+  <div class="intro">
+		<div class="intro__inside">
+	    <div class="intro__text">
+	      <h1>Оставьте свой отзыв</h1>
+	      <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
 	    </div>
-
-	    <div>
-	    	<h2>Загрузите фотографии:</h2>
-	    	<!-- нужна подсказка: как верстать загрузку фотографий с сайта -->
-	    	<button type="">Выбрать фотографии</button>
-	    	<ul class="gallery">
-				<li class="crop"> <!-- class="crop" - привести фотографии к одному размеру -->
-					<img src="" alt="">
-				</li>
-				<li class="crop">
-					<img src="" alt="">
-				</li>
-				<li class="crop">
-					<img src="" alt="">
-				</li>
-				<li class="crop">
-					<img src="" alt="">
-				</li>
-				<li class="crop">
-					<img src="" alt="">
-				</li>
-				<li class="crop">
-					<img src="" alt="">
-				</li>
-				<li class="crop">
-					<img src="" alt="">
-				</li>
-	    	</ul>
-	    </div>
-	    <button type="submit">Отправить отзыв</button>
-	</main>
+    </div>
+  </div>
 
 
 
-     <footer class="page-footer">
-		<a class="" href="#">#visitsedona</a>
+	<section class="form">
+		<div class="form__inside">
+		  <form action=""  method="post">
 
-		<div class="footer_social">
-			<a href="#"><i class="icon icon-tw"></i><span>twitter</span></a>
-			<a href="#"><i class="icon icon-facebook"></i><span>facebook</span></a>
-			<a href="#"><i class="icon icon-youtube"></i><span>youtube</span></a>
+
+
+				<div class="form-fieldset introduce">
+					<h2>Представьтесь, пожалуйста:</h2>
+					<div>
+						<label for="surname">Фамилия</label>
+						<input type="text" id="surname" name="user-surname" required placeholder="Иванов">
+					</div>
+					<div>
+						<label for="name">Имя</label>
+						<input type="text"  id="name" name="user-name" required placeholder="Петр">
+					</div>
+					<div>
+						<label for="secondname">Отчество</label>
+						<input type="text" id="secondname" name="user-secondname" placeholder="Александрович">
+					</div>	
+				</div>
+
+
+
+				<div class="form-fieldset review">
+					<h2>Ваше общее впечатление:</h2>
+					<div>
+		        <input type="radio" id="plus" name="opinion">
+		        <label for="plus">Скорее положительное</label>	
+					</div>
+		      <div>
+		        <input type="radio" id="minus" name="opinion">
+		        <label for="minus">Скорее отрицательное</label>                	
+		      </div>					
+				</div>
+
+
+
+				<div class="form-fieldset travel-time">
+					<h2>Даты вашей поездки:</h2>
+					<div>
+			      <label for="checkin">дата приезда:</label>
+			      <input type="date" id="checkin" class="calendar" required value="4 июля 2015">
+					</div>
+					<div>
+			      <label for="vocation-duration">длительность пребывания:</label>
+			      <input type="number" id="vocation-duration"  min="1" max="30" required value="14">
+					</div>
+					<div>
+			      <label for="checkout">дата отъезда:</label>
+			      <input type="date" id="checkout" class="calendar" required value="28 июля 2015">
+					</div>					
+				</div>
+
+
+
+				<div class="form-fieldset">
+					<h2>кол-во путешественников:</h2>
+					<div class="travellers">
+						<label for="travellers__how-many">количество путешественников:</label>
+		        <input type="number" id="travellers__how-many"  min="1" max="5" required value="2">
+					</div>
+					<div class="person">
+						<div class="person__number">
+							<div>№</div>
+							<div>1</div>
+						</div>
+						<div class="fullname">
+							<div class="fullname__surname">
+								<div><label  for="fullname__surname">Фамилия</label></div>
+								<div><input type="text" id="fullname__surname" name="fullname__surname" required placeholder="Иванов"></div>
+							</div>
+							<div class="fullname__name">
+								<div><label for="fullname__name">Имя</label></div>
+								<div><input type="text" id="fullname__name" name="fullname__name" required placeholder="Петр"></div>
+							</div>
+							<div class="fullname__patronymic">
+								<div><label for="fullname__secondname">Отчество</label></div>
+								<div><input type="text" id="fullname__secondname" name="fullname__secondname" placeholder="Александрович"></div>
+							</div>
+						</div>
+					</div>
+					<div class="person">
+						<div class="person__number">
+							<div>№</div>
+							<div>2</div>
+						</div>
+						<div class="fullname">
+							<div class="fullname__surname">
+								<div><label  for="fullname__surname">Фамилия</label></div>
+								<div><input type="text" id="fullname__surname" name="fullname__surname" required placeholder="Иванов"></div>
+							</div>
+							<div class="fullname__name">
+								<div><label for="fullname__name">Имя</label></div>
+								<div><input type="text" id="fullname__name" name="fullname__name" required placeholder="Петр"></div>
+							</div>
+							<div class="fullname__patronymic">
+								<div><label for="fullname__secondname">Отчество</label></div>
+								<div><input type="text" id="fullname__secondname" name="fullname__secondname" placeholder="Александрович"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="form-fieldset">
+					<h2>посещенные достопримечательности:</h2>
+					<div class="place">
+		        <input type="checkbox" id="place__bridge" name="user-interest" checked>
+		        <label for="place__bridge">Мост Дьявола</label>
+					</div>
+					<div class="place">
+		        <input type="checkbox" id="place__park" name="user-interest">
+		        <label for="place__park">Слайд-парк</label>
+					</div>
+					<div class="place">
+		        <input type="checkbox" id="place__mountin" name="user-interest" checked>
+		        <label for="place__mountin">Гора-Колокол</label>
+					</div>
+					<div class="place">
+		        <input type="checkbox" id="place__rock" name="user-interest" checked>
+		        <label for="place__rock">Красные скалы</label>
+					</div>					
+				</div>
+			</form>
+		</div>			<!-- form__inside -->
+	</section>
+
+
+	<section class="pop-up">
+	  <div class="popup-failure">
+	  	<div class="popup-failure__title">Что-то пошло не так!</div>
+	  	<p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+	  	<a class="btn">ok</a>
+	  </div>
+	  <div class="popup-success">
+	  	<div class="popup-success__title">Ваш отзыв отправлен!</div>
+	  	<p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+	  	<a class="btn">Закрыть окно</a>
+	  </div>
+	</section>
+
+
+
+	<section class="photo">
+		<div class="photo__inside">
+			<h3>Загрузите фотографии:</h3>
+			<button type="">Выбрать фотографии</button>
+			<ul class="photo__gallery">
+				<li class="photo__item"><img src="" alt=""></li>
+				<li class="photo__item"><img src="" alt=""></li>
+				<li class="photo__item"><img src="" alt=""></li>
+				<li class="photo__item"><img src="" alt=""></li>
+				<li class="photo__item"><img src="" alt=""></li>
+				<li class="photo__item"><img src="" alt=""></li>
+				<li class="photo__item"><img src="" alt=""></li>
+			</ul>
+			<button type="submit">Отправить отзыв</button>
 		</div>
-
-		<a class="htmlacademy" href="#">Разработано
-			<img class="" src="">
-		</a>
-
-	</footer>
+	</section>
+</main>
 
 
+
+<footer class="page-footer">
+	<div class="page-footer__inside">
+			<a class="page-footer__link-1" href="#">#visitsedona</a>
+			<ul class="social-links">
+				<li><a href="#" class="social-links__twitter">twitter</a></li>
+				<li><a href="#" class="social-links__facebook">facebook</a></li>
+				<li><a href="#" class="social-links__youtube">youtube</a></li>
+			</ul>
+			<a class="page-footer__link-2" href="#">Разработано<img class="" src=""></a>
+	</div>
+</footer>
 
 
 
