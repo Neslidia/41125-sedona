@@ -1,30 +1,208 @@
-$color: #fff;
-$bg-color: #000;
-$wrap-width: 300px;
+// переменные
+// @white: #ffffff;
+// @gray: #eeeeee;
+// @brown: #604e43;
+// @brown-down: #766357;
 
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+// @blue: #81b3d2;
+// @blue-hover: #669ec0;
+// @blue-down: #5496bd;
+
+// @gray-second: #f2f2f2;
+// @gray-hover-disabled: #e5e5e5;
+// @gray-down: #d5d5d5;
+
+// @text-color: #333333;
+// @headings-color: #000000;
+// @text-color-white: #ffffff;
+// @second-text-gray: #999999;
+// @html-size-baze: 10px;
+// @font-size: ;
+// @line-height: ;
+// @headings-weight: ;
+// @font-size--h1: ;
+// @font-size--h2: ;
+// @font-size--h3: ;
+// @font-size--h4: ;
+// @font-size--h5: ;
+// @font-size--h6: ;
+// @font-family: ;
+// @font-family--headings: ;
+
+
+$white: #ffffff;
+$gray: #eeeeee;
+$brown: #604e43;
+$brown-down: #766357;
+
+$blue: #81b3d2;
+$blue-hover: #669ec0;
+$blue-down: #5496bd;
+$blue-dark: #678fa8;
+$blue-light: #9ac2db;
+
+$gray-second: #f2f2f2;
+$gray-hover-disabled: #e5e5e5;
+$gray-down: #d5d5d5;
+
+$text-color: #333333;
+$headings-color: #000000;
+$text-color-white: #ffffff;
+$second-text-gray: #999999;
+$html-size-baze: 10px;
+$font-size: ;
+$line-height: ;
+$headings-weight: ;
+$font-size--h1: ;
+$font-size--h2: ;
+$font-size--h3: ;
+$font-size--h4: ;
+$font-size--h5: ;
+$font-size--h6: ;
+$font-family: 'PT Sans', sans-serif;
+$font-family--headings: 'PT Sans', sans-serif;
+
+
+/*    typography    */
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
 }
 
-body {
-  background-color: $bg-color;
-  color: $color;
+h1, h2, h3 {
+  color: $headings-color;
+  text-transform: uppercase;
+  font-family: $font-family--headings;
 }
+p {
+  font-family: $font-family;
+  color: $text-color;
+  text-transform: uppercase;
+}
+.btn {
+  display: block;
+  border: none;
+  width: 280px;
+  height: 58px;
+
+}
+.blue-btn {
+  background: $blue;
+  color: $white;
+}
+img {
+  max-width: 100%;
+}
+
+
+/*    main navigation    */
 
 .page-header {
-  &__logo-wrap {
-    width: $wrap-width;
-    height: $wrap-width/2;
-    margin: $wrap-width/4 auto 0;
-    text-align: center;
-  }
+  font-family: $font-family;
+  background: $blue;
+    .page-header__banner {
+      pops: relative;
+    }
+    .page-header__lettering {
+     position: absolute;
+     top: 40%;
+     left: 10%;
+     z-index: 20; 
+    }
+    .page-header__mask {
+     position: absolute;
+     bottom: 100%;
+     z-index: 10; 
+    }
+    #nav-toggle {}
+    .page-nav {}
+    .page-nav__list {
+        line-height: 3em;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        border-bottom: 1px solid $blue-dark;
+        border-top: 1px solid $blue-light;
+        a {
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: .25s;
+        }
+    }
+    .page-nav__logo {}
+    
+}
 
-  &__logo-link {
-    color: $color;
-    font-size: 28px;
-    font-weight: bold;
+/*    main navigation    */
+
+.advertising__intro {
+  background: $white;
+  text-align: center;
+}
+.advertising__point-interest {
+  background: $blue;
+  text-align: center;
+  h1, h2, h3 {
+  color: $white;
+}
+
+  p {
+    color: $white;
   }
 }
+
+.advertising__recommendation {
+  text-align: left;
+  .advertising__dwell {
+    margin-left: 35%;
+  }
+  .advertising__hamburger {
+    margin-left: 35%;
+  }
+  .advertising__gift {
+    margin-left: 35%;
+  }
+}
+
+
+
+.advertising__preference {
+  text-align: center;
+  background: $gray;
+}
+.advertising__hotel-booking {
+  text-align: center;
+}
+
+
+
+// было в файле
+// $color: #fff;
+// $bg-color: #000;
+// $wrap-width: 300px;
+// html, body {
+//   height: 100%;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+// body {
+//   background-color: $bg-color;
+//   color: $color;
+// }
+// .page-header {
+//   &__logo-wrap {
+//     width: $wrap-width;
+//     height: $wrap-width/2;
+//     margin: $wrap-width/4 auto 0;
+//     text-align: center;
+//   }
+//   &__logo-link {
+//     color: $color;
+//     font-size: 28px;
+//     font-weight: bold;
+//   }
+// }
