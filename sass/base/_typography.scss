@@ -1,1 +1,26 @@
+/* typography
+   ========================================================================== */
+
+h1 {
+    font-size: $font-size--h1;
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+    color: $headings-color;
+    text-transform: uppercase;
+    font-family: $font-family--headings;
+    font-weight: 700;
+}
+
+p {
+    font-family: $font-family;
+    color: $text-color;
+    text-transform: uppercase;
+    font-size: $font-size-p;
+    line-height: 1.5;
+    font-weight: 400;
+}
 

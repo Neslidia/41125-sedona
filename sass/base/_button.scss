@@ -1,0 +1,13 @@
+.btn {
+    border: none;
+    width: 280px;
+    height: 58px;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.blue-btn {
+    background: $blue;
+    color: $white;
+}

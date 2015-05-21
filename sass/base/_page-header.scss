@@ -1,0 +1,126 @@
+/* page-header
+   ========================================================================== */
+
+.page-header {
+    font-family: $font-family;
+    &__banner {
+        height: 400px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 360px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-left: 200px solid $white;
+            z-index: 30;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 360px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-right: 200px solid $white;
+            z-index: 30;
+        }
+    }
+    &__lettering {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        z-index: 20;
+    }
+    &__toggle-down {
+        display: block;
+        height: 60px;
+        background: $white;
+    }
+}
+
+.page-nav {
+    position: relative;
+    &__list-item {
+        font-size: 1.12rem;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        background: $blue;
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 1px solid $blue-dark;
+        border-top: 1px solid $blue-light;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+        transition: .25s;
+    }
+    &__logo {
+        position: absolute;
+        line-height: none;
+        left: 35%;
+        top: 100%;
+        z-index: 30;
+    }
+}
+
+#nav-toggle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+#nav-toggle {
+    cursor: pointer;
+    // padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    transition: all 500ms ease-in-out;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}

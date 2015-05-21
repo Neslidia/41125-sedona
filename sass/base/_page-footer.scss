@@ -1,0 +1,36 @@
+/* page-footer
+   ========================================================================== */
+
+.page-footer {
+    text-align: center;
+    pagging-top: 40px;
+
+    &__visitsedona {
+        color: $black;
+        display: block;
+        line-height: 2;
+        font-size: 1.6rem;
+    }
+    &__made-by {
+        color: $black;
+        display: block;
+        line-height: 4;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+}
+
+.social-links {
+    &__twitter {
+        display: inline-block;
+        line-height: 2;
+    }
+    &__facebook {
+        display: inline-block;
+        line-height: 2;
+    }
+    &__youtube {
+        display: inline-block;
+        line-height: 2;
+    }
+}

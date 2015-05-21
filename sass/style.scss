@@ -1,13 +1,15 @@
 @import 'base/normalize';
 @import 'base/variables';
 @import 'base/grid';
-@import 'base/media';
+@import 'base/button';
 @import 'base/typography';
-
-/*    typography    */
+@import 'base/page-header';
+@import 'base/advertising';
+@import 'base/page-footer';
+/*    mini-reset    */
 
 body {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 * {
@@ -22,184 +24,7 @@ a {
 li {
     list-style: none;
 }
-h1 {
-  font-size: $font-size--h1;
-}
-
-h1,
-h2,
-h3 {
-    color: $headings-color;
-    text-transform: uppercase;
-    font-family: $font-family--headings;
-}
-
-p {
-    font-family: $font-family;
-    color: $text-color;
-    text-transform: uppercase;
-    font-size: $font-size;
-}
-
-.btn {
-    display: block;
-    border: none;
-    width: 280px;
-    height: 58px;
-    font-size: 2.1rem;
-}
-
-.blue-btn {
-    background: $blue;
-    color: $white;
-}
 
 img {
     max-width: 100%;
 }
-/*    main navigation    */
-
-.page-header {
-    font-family: $font-family;
-    .page-header__banner {
-        pops: relative;
-    }
-    .page-header__lettering {
-        position: absolute;
-        top: 40%;
-        left: 10%;
-        z-index: 20;
-    }
-    .page-header__mask {
-        position: absolute;
-        bottom: 100%;
-        z-index: 10;
-    }
-    #nav-toggle {}
-    .page-nav {
-        position: relative;
-    }
-    .page-nav__list-item {
-        font-size: 1.12rem;
-        font-weight: bold;
-        text-align: center;
-        display: block;
-        background: $blue;
-        color: $white;
-        text-decoration: none;
-        text-transform: uppercase;
-        border-bottom: 1px solid $blue-dark;
-        border-top: 1px solid $blue-light;
-        transition: .25s;
-    }
-    .page-nav__logo {
-        position: absolute;
-        line-height: 3em;
-        left: 45%;
-        bottom: -49%;
-    }
-}
-/*    main navigation    */
-
-.advertising__intro {
-    background: $white;
-    text-align: center;
-}
-
-.advertising__point-interest {
-    background: $blue;
-    text-align: center;
-    h1, h2, h3 {
-        color: $white;
-    }
-    p {
-        color: $white;
-    }
-}
-
-.advertising__recommendation {
-    text-align: left;
-    .advertising__dwell {
-        display: inline-block;
-        text-align: center;
-    }
-    .advertising__hamburger {
-        margin-left: 35%;
-    }
-    .advertising__gift {
-        margin-left: 35%;
-    }
-}
-
-.advertising__preference {
-    text-align: center;
-    background: $gray;
-}
-
-.advertising__hotel-booking {
-    position: relative;
-    text-align: center;
-    input[type="submit"] {
-        display: inline-block;
-        text-align: center;
-    }
-    .advertising__interes {
-      font-size: 2.1rem;
-    }
-}
-
-// footer
-.page-footer__visitsedona {
-    color: $black;
-    display: block;
-    line-height: 4;
-}
-
-.social-links__twitter {
-    display: inline-block;
-    line-height: 4;
-}
-
-.social-links__facebook {
-    display: inline-block;
-    line-height: 4;
-}
-
-.social-links__youtube {
-    display: inline-block;
-    line-height: 4;
-}
-
-.page-footer__made-by {
-    color: $black;
-    display: block;
-    line-height: 4;
-}
-
-// было в файле
-// $color: #fff;
-// $bg-color: #000;
-// $wrap-width: 300px;
-// html, body {
-//   height: 100%;
-//   width: 100%;
-//   margin: 0;
-//   padding: 0;
-// }
-// body {
-//   background-color: $bg-color;
-//   color: $color;
-// }
-// .page-header {
-//   &__logo-wrap {
-//     width: $wrap-width;
-//     height: $wrap-width/2;
-//     margin: $wrap-width/4 auto 0;
-//     text-align: center;
-//   }
-//   &__logo-link {
-//     color: $color;
-//     font-size: 28px;
-//     font-weight: bold;
-//   }
-// }
