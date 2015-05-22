@@ -6,6 +6,7 @@
 @import 'base/page-header';
 @import 'base/advertising';
 @import 'base/page-footer';
+@import 'base/icomoon';
 /*    mini-reset    */
 
 body {
@@ -23,8 +24,4 @@ a {
 
 li {
     list-style: none;
-}
-
-img {
-    max-width: 100%;
 }

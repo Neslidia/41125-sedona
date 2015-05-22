@@ -6,14 +6,29 @@
     &__banner {
         height: 400px;
         position: relative;
+    }
+    &__lettering {
+        position: absolute;
+        top: calc((50% - 156px);
+        left: calc((50% - 160px);
+        z-index: 20;
+    }
+    &__toggle-down {
+        display: block;
+        height: 60px;
+        background: $white;
+    }
+    &__banner {
+        width: 100%;
+        height: auto;
         &:before {
             content: "";
             position: absolute;
-            top: 360px;
-            left: 0;
+            bottom: 0;
+            right: 50%;
             width: 0;
             height: 0;
-            border-top: 40px solid transparent;
+            border-top: 30px solid transparent;
             border-bottom: 0 solid transparent;
             border-left: 200px solid $white;
             z-index: 30;
@@ -21,26 +36,15 @@
         &:after {
             content: "";
             position: absolute;
-            top: 360px;
-            right: 0;
+            bottom: 0;
+            left: 50%;
             width: 0;
             height: 0;
-            border-top: 40px solid transparent;
+            border-top: 30px solid transparent;
             border-bottom: 0 solid transparent;
             border-right: 200px solid $white;
             z-index: 30;
         }
-    }
-    &__lettering {
-        position: absolute;
-        top: 10%;
-        left: 0;
-        z-index: 20;
-    }
-    &__toggle-down {
-        display: block;
-        height: 60px;
-        background: $white;
     }
 }
 
@@ -64,7 +68,7 @@
     &__logo {
         position: absolute;
         line-height: none;
-        left: 35%;
+        left: calc(50% - 69px);
         top: 100%;
         z-index: 30;
     }
@@ -81,9 +85,7 @@
     // padding: 10px 35px 16px 0px;
 }
 
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
     cursor: pointer;
     border-radius: 1px;
     height: 5px;
@@ -102,9 +104,7 @@
     bottom: -10px;
 }
 
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
     transition: all 500ms ease-in-out;
 }
 
@@ -112,8 +112,7 @@
     background-color: transparent;
 }
 
-#nav-toggle.active span:before,
-#nav-toggle.active span:after {
+#nav-toggle.active span:before, #nav-toggle.active span:after {
     top: 0;
 }
 
