@@ -5,48 +5,60 @@
     <title>Sedona-mobile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <header class="page-header">
+    <!--     <header class="page-header">
         <div class="page-header__wrapper">
             <a id="nav-toggle" href="#"><span></span></a>
             <nav class="page-nav">
                 <ul class="page-nav__list">
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Гостиницы</a></li>
+                    <li><a class="page-nav__list-item" href="#">Карта штата</a></li>
+                    <li><a class="page-nav__list-item" href="#">Информация</a></li>
+                    <li><a class="page-nav__list-item" href="#">Фото и видео</a></li>
+                    <li><a class="page-nav__list-item" href="#">Гостиницы</a></li>
                     <li class="page-nav__logo">
                         <a href="#">
-                            <img src="" alt="City of Sedona">
+                            <img src="img/sedona-logo.png" alt="City of Sedona">
                         </a>
                     </li>
                 </ul>
             </nav>
-        </div>
-        <div class="page-header__banner">
-            <div class="banner__wrapper">
-                <div class="page-header__banner-picture">
-                    <img src="" alt="Welcome to Sedona">
-                    <img class="page-header__mask" src="">
+            <a id="nav-toggle--3line" class="page-header__toggle-down" href="#"><span></span></a>
+            <div class="page-header__banner">
+                <div class="banner__wrapper">
+                    <div class="page-header__banner-picture">
+                        <img class="page-header__lettering" src="img/sedona-banner-lettering.png">
+                        <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <main class="page-main">
         <div class="post__wrapper">
             <div class="post">
-                <header class="post_intro">
+
+
+
+                <header class="post__intro">
                     <div class="intro__wrapper">
-                        <div class="intro__text">
-                            <h2>Блог шерифа</h2>
+                        <div class="blog__intro--text">
+                            <h1>Блог шерифа</h1>
                             <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
                         </div>
-                        <a class="left" href="#">Позавчера</a>
-                        <a class="right" href="#">Происшествия</a>
+                        <div class="marginalii">
+                            <a class="blog-item__when-happen" href="#">Позавчера</a>
+                            <a class="blog-item__what-happen" href="#">Происшествия</a>
+                        </div>
                     </div>
                 </header>
+
+
+                
                 <article class="post__content">
                     <header class="post__header">
                         <h1>Внимание! сбежала моя домашняя анаконда</h1>
@@ -80,12 +92,12 @@
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
-            <ul class="social-links">
-                <li><a href="#" class="social-links__twitter">twitter</a></li>
-                <li><a href="#" class="social-links__facebook">facebook</a></li>
-                <li><a href="#" class="social-links__youtube">youtube</a></li>
-            </ul>
-            <a class="page-footer__made-by" href="#">Разработано<img class="" src=""></a>
+            <div class="social-links">
+                <a href="#" class="social-links__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
+                <a href="#" class="social-links__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
+                <a href="#" class="social-links__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
+            </div>
+            <a class="page-footer__made-by" href="#">Разработано &nbsp;&nbsp;<img class="" src="img/icons-client.png"></a>
         </div>
     </footer>
 </body>

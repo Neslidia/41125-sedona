@@ -1,5 +1,6 @@
 @import 'base/normalize';
 @import 'base/variables';
+@import 'base/mixin';
 @import 'base/grid';
 @import 'base/button';
 @import 'base/typography';
@@ -7,7 +8,13 @@
 @import 'base/advertising';
 @import 'base/page-footer';
 @import 'base/icomoon';
-/*    mini-reset    */
+@import 'base/blog';
+@import 'base/form';
+@import 'base/post';
+@import 'font-scss/font-awesome';
+
+/* mini-reset
+   ========================================================================== */
 
 body {
     font-size: 10px;

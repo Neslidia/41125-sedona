@@ -1,0 +1,128 @@
+// /* advertising
+//    ========================================================================== */
+@mixin white-color-blue-bg ($a) {
+    @if lightness($a) >=50% {
+        background-color: $blue;
+    }
+    @if lightness($a)< 50% {
+        background-color: $white;
+    }
+    color: $a;
+}
+
+// {@include white-color-blue-bg( $text-color )}
+// {@include white-color-blue-bg( $white )}
+mixin text-block-1 {}
+
+@mixin gray-line {
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 8%;
+        width: 84%;
+        height: 2px;
+        background: $gray-line;
+    }
+}
+
+@mixin when-happen {
+    &__when-happen {
+        position: absolute;
+        color: $second-text-gray;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../img/icon-plus.png") 0 0 no-repeat;
+            top: 2.2em;
+            left: 3em;
+            width: 38px;
+            height: 38px;
+        }
+    }
+}
+
+@mixin what-happen {
+    &__what-happen {
+        position: absolute;
+        color: $second-text-gray;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        bottom: 0;
+        right: 0px;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../img/icon-plus.png") 0 0 no-repeat;
+            top: 2.2em;
+            left: 3em;
+            width: 38px;
+            height: 38px;
+        }
+    }
+}
+
+@mixin intro {
+    position: relative;
+    padding-bottom: 30px;
+    text-align: center;
+    &--text p {
+        line-height: 1.6em;
+    }
+    &--text h1 {
+        font-size: 1.63rem;
+        margin-bottom: 0.9em;
+    }
+}
+
+@mixin pagination {
+    display: inline-block;
+    margin-bottom: 19px;
+    width: 57px;
+    line-height: 57px;
+    color: $text-color-white;
+    font-size: 1.3rem;
+    background: $blue;
+    margin-right: 14px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+@mixin clearfix {
+    .clearfix:before {
+        content: " ";
+        display: table;
+    }
+    .clearfix:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    /* IE6/7 support */
+    
+    .clearfix {
+        *zoom: 1;
+    }
+}
+
+// {@include clearfix}
+@mixin container {
+    margin: auto;
+    @madia (min-width: $screen-md) {
+        width: $screen-md;
+    }
+    @madia (min-width: $screen-md) {
+        width: $screen-md;
+    }
+    @madia (min-width: $screen-lg) {
+        width: $screen-lg;
+    }
+}
+
+// // {@include container}

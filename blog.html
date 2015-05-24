@@ -5,99 +5,132 @@
     <title>Sedona-mobile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <header class="page-header">
+    <!--     <header class="page-header">
         <div class="page-header__wrapper">
             <a id="nav-toggle" href="#"><span></span></a>
             <nav class="page-nav">
                 <ul class="page-nav__list">
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Гостиницы</a></li>
+                    <li><a class="page-nav__list-item" href="#">Карта штата</a></li>
+                    <li><a class="page-nav__list-item" href="#">Информация</a></li>
+                    <li><a class="page-nav__list-item" href="#">Фото и видео</a></li>
+                    <li><a class="page-nav__list-item" href="#">Гостиницы</a></li>
                     <li class="page-nav__logo">
                         <a href="#">
-                            <img src="" alt="City of Sedona">
+                            <img src="img/sedona-logo.png" alt="City of Sedona">
                         </a>
                     </li>
                 </ul>
             </nav>
-        </div>
-        <div class="page-header__banner">
-            <div class="banner__inside">
-                <div class="page-header__banner-picture">
-                    <img src="" alt="Welcome to Sedona">
-                    <img class="page-header__mask" src="">
+            <a id="nav-toggle--3line" class="page-header__toggle-down" href="#"><span></span></a>
+            <div class="page-header__banner">
+                <div class="banner__wrapper">
+                    <div class="page-header__banner-picture">
+                        <img class="page-header__lettering" src="img/sedona-banner-lettering.png">
+                        <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <main class="page-main">
-        <div class="blog__wrapper">
+        <div class="blog-item__wrapper">
             <div class="blog">
+
+
+
                 <header class="blog__intro">
                     <div class="blog__intro--text">
                         <h1>Блог шерифа</h1>
                         <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
                     </div>
+
                 </header>
-                <article class="blog">
-                    <div class="blog__text">
-                        <h3>Внимание! сбежала моя домашняя анаконда</h3>
+
+
+
+                <article class="blog-item">
+
+                    <div class="blog-item__text">
+                        <h3 class="blog-item__text-small">Внимание! сбежала моя домашняя анаконда</h3>
                         <p>Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
                     </div>
-                    <a class="blog__when-happen" href="#">Позавчера</a>
-                    <a class="blog__what-happen" href="#">Происшествия</a>
+
+                    <div class="marginalii">
+                        <a class="blog-item__when-happen" href="#">Позавчера</a>
+                        <a class="blog-item__what-happen" href="#">Происшествия</a>
+                    </div>
+
                 </article>
-                <article class="blog">
-                    <div class="blog__text">
-                        <h3>Принят антитабачный закон штата</h3>
+
+
+
+                <article class="blog-item">
+                    <div class="blog-item__text">
+                        <h3 class="blog-item__text-normal">Принят антитабачный закон штата</h3>
                         <p>Уважаемые туристы, пожалуйста не забывайте, что курение сигарет и сигар в общественных местах города Седона категорически запрещено.</p>
                     </div>
-                    <a class="blog__when-happen" href="#">2 дня назад</a>
-                    <a class="blog__what-happen" href="#">Законы</a>
+                    <div class="marginalii">
+                        <a class="blog-item__when-happen" href="#">2 дня назад</a>
+                        <a class="blog-item__what-happen" href="#">Законы</a>
+                    </div>
                 </article>
-                <article class="blog">
-                    <div class="blog__text">
-                        <h3>Маньяк задержан, дает показания</h3>
+                <article class="blog-item">
+                    <div class="blog-item__text">
+                        <h3 class="blog-item__text-normal">Маньяк задержан, дает показания</h3>
                         <p>Жители седоны могут спать спокойно. Задержан маньяк-эксгибиционист, державший в страхе весь город. Пострадавшим обращаться в 911.</p>
                     </div>
-                    <a class="blog__when-happen" href="#">3 дня назад</a>
-                    <a class="blog__what-happen" href="#">Происшествия</a>
+                    <div class="marginalii">
+                        <a class="blog-item__when-happen" href="#">3 дня назад</a>
+                        <a class="blog-item__what-happen" href="#">Происшествия</a>
+                    </div>
                 </article>
-                <article class="blog">
-                    <div class="blog__text">
-                        <h3>Водопад закрыт на реконструкцию</h3>
+                <article class="blog-item">
+                    <div class="blog-item__text">
+                        <h3 class="blog-item__text-normal">Водопад закрыт на реконструкцию</h3>
                         <p>Всем, кто планировал посещать водопад на этих выходных придется изменить планы, на нем ведутся ремонтные работы по улучшению подачи воды.</p>
                     </div>
-                    <a class="blog__when-happen" href="#">Неделю назад</a>
-                    <a class="blog__what-happen" href="#">Интересное</a>
+                    <div class="marginalii">
+                        <a class="blog-item__when-happen" href="#">Неделю назад</a>
+                        <a class="blog-item__what-happen" href="#">Интересное</a>
+                    </div>
                 </article>
-                <article class="blog">
-                    <div class="blog__text">
-                        <h3>Отрылся новый стейкхаус «горный бык»</h3>
+                <article class="blog-item">
+                    <div class="blog-item__text">
+                        <h3 class="blog-item__text-normal">Отрылся новый стейкхаус «горный бык»</h3>
                         <p>Лучшие стейки в Аризоне! Приемлемые цены и только самые лучшие продукты. Заходите попробовать! Действует акция: съешь два и получи третий!</p>
                     </div>
-                    <a class="blog__when-happen" href="#">Месяц назад</a>
-                    <a class="blog__what-happen" href="#">Еда</a>
+                    <div class="marginalii">
+                        <a class="blog-item__when-happen" href="#">Месяц назад</a>
+                        <a class="blog-item__what-happen" href="#">Еда</a>
+                    </div>
                 </article>
-                <article class="blog">
-                    <div class="blog__text">
-                        <h3>Прогноз погоды на ближайшие выходные</h3>
+                <article class="blog-item">
+                    <div class="blog-item__text">
+                        <h3 class="blog-item__text-normal">Прогноз погоды на ближайшие выходные</h3>
                         <p>Синоптики обещают, что будет ясно, безветрено и около 90 по фаренгейту. Как в пустыне! Проверим их слова уже через пару дней.!</p>
                     </div>
-                    <a class="blog__when-happen" href="#">Год назад</a>
-                    <a class="blog__what-happen" href="#">Погода</a>
+                    <div class="marginalii">
+                        <a class="blog-item__when-happen" href="#">Год назад</a>
+                        <a class="blog-item__what-happen" href="#">Погода</a>
+                    </div>
                 </article>
-                <footer class="blog__pagination">
+                <footer class="blog-item--pagination">
                     <ul>
-                        <li><a class="blog__pagination--active" href="#">1</a></li>
-                        <li><a class="" href="#">2</a></li>
-                        <li><a class="" href="#">3</a></li>
-                        <li><a class="" href="#">4</a></li>
-                        <li><a class="" href="#">5</a></li>
+                        <li class="blog-item--pagination-item"><a class=" blog-item--pagination-active" href="#">1</a></li>
+                        <li class="blog-item--pagination-item"><a class="" href="#">2</a>
+                        </li>
+                        <li class="blog-item--pagination-item"><a class="" href="#">3</a>
+                        </li>
+                        <li class="blog-item--pagination-item"><a class="" href="#">4</a>
+                        </li>
+                        <li class="blog-item--pagination-item"><a class="" href="#">5</a>
+                        </li>
                     </ul>
                 </footer>
             </div>
@@ -106,12 +139,12 @@
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
-            <ul class="social-links">
-                <li><a href="#" class="social-links__twitter">twitter</a></li>
-                <li><a href="#" class="social-links__facebook">facebook</a></li>
-                <li><a href="#" class="social-links__youtube">youtube</a></li>
-            </ul>
-            <a class="page-footer__made-by" href="#">Разработано<img class="" src=""></a>
+            <div class="social-links">
+                <a href="#" class="social-links__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
+                <a href="#" class="social-links__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
+                <a href="#" class="social-links__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
+            </div>
+            <a class="page-footer__made-by" href="#">Разработано &nbsp;&nbsp;<img class="" src="img/icons-client.png"></a>
         </div>
     </footer>
 </body>

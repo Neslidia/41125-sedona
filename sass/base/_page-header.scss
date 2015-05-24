@@ -4,8 +4,30 @@
 .page-header {
     font-family: $font-family;
     &__banner {
-        height: 400px;
+        height: 512px;
         position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../img/sedona-banner-lettering.png") 0 0 no-repeat;
+            width: 320px;
+            height: 313px;
+            z-index: 50;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../img/mask.png") 0 0 no-repeat;
+            background-size: cover;
+            bottom: -1px;
+            width: 100%;
+            height: 37px;
+            z-index: 50;
+        }
+    }
+    &__banner-picture img {
+        min-height: 100%;
+        width: auto;
     }
     &__lettering {
         position: absolute;
@@ -17,34 +39,6 @@
         display: block;
         height: 60px;
         background: $white;
-    }
-    &__banner {
-        width: 100%;
-        height: auto;
-        &:before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            right: 50%;
-            width: 0;
-            height: 0;
-            border-top: 30px solid transparent;
-            border-bottom: 0 solid transparent;
-            border-left: 200px solid $white;
-            z-index: 30;
-        }
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-top: 30px solid transparent;
-            border-bottom: 0 solid transparent;
-            border-right: 200px solid $white;
-            z-index: 30;
-        }
     }
 }
 
@@ -85,7 +79,9 @@
     // padding: 10px 35px 16px 0px;
 }
 
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
     cursor: pointer;
     border-radius: 1px;
     height: 5px;
@@ -95,31 +91,171 @@
     display: block;
     content: '';
 }
+// 
+// 
+// .page-header {
+//   width: 320px;
+//   margin: 0 auto;
+//   background: #1d2631;
+//   color: white;
+//   font-family: Arial;
+// }
 
-#nav-toggle span:before {
-    top: -10px;
+.page-header a {
+  color: white;
+  text-decoration: none;
 }
 
-#nav-toggle span:after {
-    bottom: -10px;
+.page-header__logo {
+  padding: 10px;
 }
 
-#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
-    transition: all 500ms ease-in-out;
+.page-header__wrap {
+  position: relative;
 }
 
-#nav-toggle.active span {
-    background-color: transparent;
+.page-header__wrap--open {
+  background: #283645;
 }
 
-#nav-toggle.active span:before, #nav-toggle.active span:after {
-    top: 0;
+.main-nav {
+  position: absolute;
+  width: 100%;
+  top: 38px;
+  background: #283645;
 }
 
-#nav-toggle.active span:before {
-    transform: rotate(45deg);
+.main-nav__list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-#nav-toggle.active span:after {
-    transform: rotate(-45deg);
+.main-nav__list a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -25px;
+  right: 10px;
+}
+
+.main-nav__toggle:before {
+  content: "\f0c9";
+  font-family: FontAwesome;
+}
+
+.main-nav__toggle--close:before {
+  content: "\f00d";
+  font-family: FontAwesome;
+}
+
+
+.page-header__promo-block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.page-header__download-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.page-header__operation-system-section {
+  padding-top: 20px;
+}
+// 
+// 
+.page-header {
+  width: 320px;
+  margin: 0 auto;
+  background: #1d2631;
+  color: white;
+  font-family: Arial;
+}
+
+.page-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.page-header__logo {
+  padding: 10px;
+}
+
+.page-header__wrap {
+  position: relative;
+}
+
+.page-header__wrap--open {
+  background: #283645;
+}
+
+.main-nav {
+  position: absolute;
+  width: 100%;
+  top: 38px;
+  background: #283645;
+}
+
+.main-nav__list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.main-nav__list a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  border-top: 1px solid black;
+  
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -25px;
+  right: 10px;
+}
+
+.main-nav__toggle:before {
+  content: "\f0c9";
+  font-family: FontAwesome;
+}
+
+.main-nav__toggle--close:before {
+  content: "\f00d";
+  font-family: FontAwesome;
+}
+
+
+.page-header__promo-block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.page-header__download-btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.page-header__operation-system-section {
+  padding-top: 20px;
 }

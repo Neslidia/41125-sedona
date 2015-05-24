@@ -1,3 +1,4 @@
+
 $white: #ffffff;
 $black: #000000;
 $gray: #eeeeee;
@@ -10,11 +11,12 @@ $blue-dark: #678fa8;
 $blue-light: #9ac2db;
 $gray-second: #f2f2f2;
 $gray-third: #d6d6d6;
+$gray-line: #dbdbdb;
 $gray-hover-disabled: #e5e5e5;
 $gray-down: #d5d5d5;
-$text-color: #333333;
 $headings-color: $black;
-$text-color-white: #ffffff;
+$text-color-white: $white;
+$text-color: #333333;
 $second-text-gray: #999999;
 $html-size-baze: 10px;
 $font-size-p: 0.9rem;
@@ -26,9 +28,11 @@ $font-size--h3:;
 $font-size--h4:;
 $font-size--h5:;
 $font-size--h6:;
-$font-family: 'PT Sans',
-sans-serif;
+$font-family: 'PT Sans',sans-serif;
 $font-family--headings:;
-$screen-ph: 480px;
-$screen-md:;
-$screen-lg:;
+$screen-xs: 480px;
+$screen-md: 768px;
+$screen-lg: 1200px;
+$props: ;
+$animal: ;
+
