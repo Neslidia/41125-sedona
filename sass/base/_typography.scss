@@ -9,17 +9,17 @@ h1 {
 h1,
 h2,
 h3 {
-    color: $headings-color;
-    text-transform: uppercase;
     font-family: $font-family--headings;
     font-weight: 700;
+    text-transform: uppercase;
+    color: $headings-color;
 }
 
 p {
     font-family: $font-family;
-    color: $text-color;
-    text-transform: uppercase;
     font-size: $font-size-p;
-    line-height: 1.5;
     font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: $text-color;
 }

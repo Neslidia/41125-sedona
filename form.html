@@ -5,15 +5,14 @@
     <title>Sedona-mobile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <header class="page-header">
-        <div class="page-header__wrapper">
-            <a id="nav-toggle" href="#"><span></span></a>
+        <div class="wrapper">
             <nav class="page-nav">
                 <ul class="page-nav__list">
                     <li><a class="page-nav__list-item" href="#">Карта штата</a></li>
@@ -26,39 +25,40 @@
                         </a>
                     </li>
                 </ul>
+                <a href="#" class="main-nav__toggle"></a>
             </nav>
-            <a id="nav-toggle--3line" class="page-header__toggle-down" href="#"><span></span></a>
-            <div class="page-header__banner">
-                <div class="banner__wrapper">
-                    <div class="page-header__banner-picture">
-                        <img class="page-header__lettering" src="img/sedona-banner-lettering.png">
-                        <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
-                    </div>
+            <div class="page-header__banner form">
+                <div class="page-header__banner-picture">
+                    <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
                 </div>
             </div>
         </div>
     </header>
-
-
     <main class="page-main">
-        <div class="review__wrapper">
+        <div class="wrapper">
             <div class="review">
+                <header class="review__intro">
+                    <div class="review__intro--text">
+                        <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+                        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+                    </div>
+                </header>
                 <section class="review__form">
                     <form action="" method="post">
                         <div class="review__introduce">
                             <h2>Представьтесь, пожалуйста:</h2>
                             <div class="review__fullname">
                                 <div>
-                                    <label for="fullname__surname">Фамилия</label>
-                                    <input type="text" id="fullname__surname" name="fullname__surname" required placeholder="Иванов">
+                                    <label for="review__fullname-surname">Фамилия</label>
+                                    <input type="text" id="review__fullname-surname" name="review__fullname-surname" required placeholder="Иванов">
                                 </div>
                                 <div>
-                                    <label for="fullname__name">Имя</label>
-                                    <input type="text" id="fullname__name" name="fullname__name" required placeholder="Петр">
+                                    <label for="review__fullname-name">Имя</label>
+                                    <input type="text" id="review__fullname-name" name="review__fullname-name" required placeholder="Петр">
                                 </div>
                                 <div>
-                                    <label for="fullname__secondname">Отчество</label>
-                                    <input type="text" id="fullname__secondname" name="fullname__secondname" placeholder="Александрович">
+                                    <label for="review__fullname-secondname">Отчество</label>
+                                    <input type="text" id="review__fullname-secondname" name="review__fullname-secondname" placeholder="Александрович">
                                 </div>
                             </div>
                         </div>
@@ -76,84 +76,94 @@
                         <div class="review__travel-time">
                             <h2>Даты вашей поездки:</h2>
                             <div>
-                                <label for="travel-time__checkin">дата приезда:</label>
-                                <input type="date" id="travel-time__checkin" name="travel-time__calendar" required value="4 июля 2015">
+                                <label for="review__checkin">дата приезда:</label>
+                                <input type="date" id="review__checkin" name="review__calendar" required value="4 июля 2015">
                             </div>
                             <div>
-                                <label for="travel-time__duration">длительность пребывания:</label>
-                                <input type="number" id="travel-time__duration" id="travel-time__duration" min="1" max="30" required value="14">
+                                <label for="review__duration">длительность пребывания:</label>
+                                <input type="number" id="review__duration" id="review__duration" min="1" max="30" required value="14">
                             </div>
                             <div>
-                                <label for="travel-time__checkout">дата отъезда:</label>
-                                <input type="date" id="travel-time__checkout" name="travel-time__calendar" required value="28 июля 2015">
+                                <label for="review__checkout">дата отъезда:</label>
+                                <input type="date" id="review__checkout" name="review__calendar" required value="28 июля 2015">
                             </div>
                         </div>
                         <div class="review__travellers-reckon">
                             <h2>кол-во путешественников:</h2>
-                            <div class="travellers-count">
-                                <label for="travellers-count__how-many">количество путешественников:</label>
-                                <input type="number" id="travellers__how-many" min="1" max="5" required value="2">
+                            <div class="review__travellers-count">
+                                <label for="review__travellers-count">количество путешественников:</label>
+                                <input type="number" id="review__travellers-count" min="1" max="5" required value="2">
                             </div>
-                            <div class="traveller">
-                                <div class="traveller__number">
+
+
+
+                            <div class="review__traveller">
+
+                                <header class="review__traveller-number">
                                     <div>№</div>
-                                    <div>1</div>
-                                </div>
-                                <div class="traveller__fullname">
-                                    <div class="traveller__surname">
+                                    <div>
+                                        <label for="review__traveller-surname">Фамилия</label>
+                                    </div>
+                                </header>
+
+                                <div class="review__traveller-fullname">
+                                    <div class="review__traveller-surname">
                                         <div>
-                                            <label for="traveller__surname">Фамилия</label>
+                                            <input type="text" id="" name="" required placeholder="1">
                                         </div>
                                         <div>
-                                            <input type="text" id="traveller__surname" name="traveller__surname" required placeholder="Иванов">
+                                            <input type="text" id="review__traveller-surname" name="review__traveller-surname" required placeholder="Иванов">
                                         </div>
                                     </div>
-                                    <div class="traveller__name">
+                                    <div class="review__traveller-name">
                                         <div>
-                                            <label for="traveller__name">Имя</label>
+                                            <label for="review__traveller-name">Имя</label>
                                         </div>
                                         <div>
-                                            <input type="text" id="traveller__name" name="traveller__name" required placeholder="Петр">
+                                            <input type="text" id="review__traveller-name" name="review__traveller-name" required placeholder="Петр">
                                         </div>
                                     </div>
-                                    <div class="traveller__patronymic">
+                                    <div class="review__traveller-secondname">
                                         <div>
-                                            <label for="traveller__secondname">Отчество</label>
+                                            <label for="review__traveller-secondname">Отчество</label>
                                         </div>
                                         <div>
-                                            <input type="text" id="traveller__secondname" name="traveller__secondname" placeholder="Александрович">
+                                            <input type="text" id="review__traveller-secondname" name="review__traveller-secondname" placeholder="Александрович">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="traveller">
-                                <div class="traveller__number">
+
+
+
+                            <div class="review__traveller">
+                                <div class="review__traveller-number">
                                     <div>№</div>
                                     <div>2</div>
                                 </div>
-                                <div class="traveller__fullname">
-                                    <div class="traveller__surname">
+                                <div class="review__traveller-fullname">
+                                    <div class="review__traveller-surname">
                                         <div>
-                                            <label for="traveller__lastname">Фамилия</label>
+                                            <label for="review__traveller-surname">Фамилия</label>
                                         </div>
                                         <div>
-                                            <input type="text" id="traveller__lastname" name="traveller__lastname" required placeholder="Иванов">
-                                        </div>
-                                    </div>
-                                    <div class="traveller__name">
-                                        <div>
-                                            <label for="traveller__firstname">Имя</label>
-                                        </div>
-                                        <div>
-                                            <input type="text" id="traveller__firstname" name="traveller__firstname" required placeholder="Петр">
+                                            <input type="text" id="review__traveller-surname" name="review__traveller-surname" required placeholder="Иванов">
                                         </div>
                                     </div>
-                                    <div class="traveller__patronymic">
+                                    <div class="review__traveller-name">
                                         <div>
-                                            <label for="traveller__secondname">Отчество</label>
+                                            <label for="review__traveller-name">Имя</label>
                                         </div>
                                         <div>
-                                            <input type="text" id="traveller__secondname" name="traveller__secondname" placeholder="Александрович">
+                                            <input type="text" id="review__traveller-name" name="review__traveller-name" required placeholder="Петр">
+                                        </div>
+                                    </div>
+                                    <div class="review__traveller-patronymic">
+                                        <div>
+                                            <label for="review__traveller-secondname">Отчество</label>
+                                        </div>
+                                        <div>
+                                            <input type="text" id="review__traveller-secondname" name="review__traveller-secondname" placeholder="Александрович">
                                         </div>
                                     </div>
                                 </div>
@@ -161,21 +171,21 @@
                         </div>
                         <div class="review__place">
                             <h2>посещенные достопримечательности:</h2>
-                            <div class="review__place--where">
-                                <input type="checkbox" id="place__bridge" name="user-interest" checked>
-                                <label for="place__bridge">Мост Дьявола</label>
+                            <div class="review__place-where">
+                                <input type="checkbox" id="review__bridge" name="user-interest" checked>
+                                <label for="review__bridge">Мост Дьявола</label>
                             </div>
-                            <div class="review__place--where">
-                                <input type="checkbox" id="place__park" name="user-interest">
-                                <label for="place__park">Слайд-парк</label>
+                            <div class="review__place-where">
+                                <input type="checkbox" id="review__park" name="user-interest">
+                                <label for="review__park">Слайд-парк</label>
                             </div>
-                            <div class="review__place--where">
-                                <input type="checkbox" id="place__mountin" name="user-interest" checked>
-                                <label for="place__mountin">Гора-Колокол</label>
+                            <div class="review__place-where">
+                                <input type="checkbox" id="review__mountin" name="user-interest" checked>
+                                <label for="review__mountin">Гора-Колокол</label>
                             </div>
-                            <div class="review__place--where">
-                                <input type="checkbox" id="place__rock" name="user-interest" checked>
-                                <label for="place__rock">Красные скалы</label>
+                            <div class="review__place-where">
+                                <input type="checkbox" id="review__rock" name="user-interest" checked>
+                                <label for="review__rock">Красные скалы</label>
                             </div>
                         </div>
                     </form>
@@ -198,27 +208,27 @@
                         <button type="">Выбрать фотографии</button>
                         <ul class="review__gallery">
                             <li class="review__gallery--item">
-                                <img src="" alt="">
+                                <img src="img/coose-photo1.jpg" alt="">
                                 <p>IMG-686.jpg</p>
                             </li>
                             <li class="review__gallery--item">
-                                <img src="" alt="">
+                                <img src="img/coose-photo2.jpg" alt="">
                                 <p>IMG-687.jpg</p>
                             </li>
                             <li class="review__gallery--item">
-                                <img src="" alt="">
+                                <img src="img/coose-photo2.jpg" alt="">
                                 <p>IMG-688.jpg</p>
                             </li>
                             <li class="review__gallery--item">
-                                <img src="" alt="">
+                                <img src="img/coose-photo3.jpg" alt="">
                                 <p>IMG-689.jpg</p>
                             </li>
                             <li class="review__gallery--item">
-                                <img src="" alt="">
+                                <img src="img/coose-photo4.jpg" alt="">
                                 <p>IMG-690.jpg</p>
                             </li>
                             <li class="review__gallery--item">
-                                <img src="" alt="">
+                                <img src="img/coose-photo5.jpg" alt="">
                                 <p>IMG-691.jpg</p>
                             </li>
                         </ul>
@@ -228,10 +238,8 @@
             </div>
         </div>
     </main>
-
-
     <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="wrapper">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
             <div class="social-links">
                 <a href="#" class="social-links__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>

@@ -3,29 +3,29 @@
 
 @font-face {
     font-family: 'IcoMoon-Free';
-    src: url('../IcoMoon-Free.ttf?-b7qzp2') format('truetype');
-    src: url('..font/IcoMoon-Free.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    src: url('../IcoMoon-Free.ttf?-b7qzp2') format('truetype');
+    src: url('..font/IcoMoon-Free.ttf') format('truetype');
 }
 
 .icon {
     font-family: 'IcoMoon-Free';
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
     color: $white;
     speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
     /* Enable Ligatures ================ */
     
-    -webkit-font-feature-settings: "liga";
-    -moz-font-feature-settings: "liga=1";
-    -moz-font-feature-settings: "liga";
-    -ms-font-feature-settings: "liga" 1;
-    -o-font-feature-settings: "liga";
-    font-feature-settings: "liga";
+    -webkit-font-feature-settings: 'liga';
+    -moz-font-feature-settings: 'liga=1';
+    -moz-font-feature-settings: 'liga';
+    -ms-font-feature-settings: 'liga' 1;
+    -o-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
     /* Better Font Rendering =========== */
     
     -webkit-font-smoothing: antialiased;
@@ -33,41 +33,41 @@
 }
 
 .icon-facebook:before {
-    content: "\ea8c";
+    content: '\ea8c';
 }
 
 .icon-facebook2:before {
-    content: "\ea8d";
+    content: '\ea8d';
 }
 
 .icon-facebook3:before {
-    content: "\ea8e";
+    content: '\ea8e';
 }
 
 .icon-twitter:before {
-    content: "\ea91";
+    content: '\ea91';
 }
 
 .icon-twitter2:before {
-    content: "\ea92";
+    content: '\ea92';
 }
 
 .icon-twitter3:before {
-    content: "\ea93";
+    content: '\ea93';
 }
 
 .icon-youtube:before {
-    content: "\ea97";
+    content: '\ea97';
 }
 
 .icon-youtube2:before {
-    content: "\ea98";
+    content: '\ea98';
 }
 
 .icon-youtube3:before {
-    content: "\ea99";
+    content: '\ea99';
 }
 
 .icon-youtube4:before {
-    content: "\ea9a";
+    content: '\ea9a';
 }

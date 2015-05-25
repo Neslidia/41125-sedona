@@ -128,15 +128,15 @@ dfn {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: .67em 0;
 }
 /**
  * Address styling not present in IE 8/9.
  */
 
 mark {
-    background: #ff0;
     color: #000;
+    background: #ff0;
 }
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -158,11 +158,11 @@ sup {
 }
 
 sup {
-    top: -0.5em;
+    top: -.5em;
 }
 
 sub {
-    bottom: -0.25em;
+    bottom: -.25em;
 }
 /* Embedded content
    ========================================================================== */
@@ -233,13 +233,13 @@ input,
 optgroup,
 select,
 textarea {
-    color: inherit;
     /* 1 */
     
     font: inherit;
     /* 2 */
     
     margin: 0;
+    color: inherit;
     /* 3 */
 }
 /**
@@ -269,15 +269,15 @@ select {
  */
 
 button,
-html input[type="button"],
+html input[type='button'],
 /* 1 */
 
-input[type="reset"],
-input[type="submit"] {
-    -webkit-appearance: button;
+input[type='reset'],
+input[type='submit'] {
     /* 2 */
     
     cursor: pointer;
+    -webkit-appearance: button;
     /* 3 */
 }
 /**
@@ -294,8 +294,8 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
     padding: 0;
+    border: 0;
 }
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
@@ -313,8 +313,8 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
     box-sizing: border-box;
     /* 1 */
     
@@ -327,8 +327,8 @@ input[type="radio"] {
  * decrement button to change from `default` to `text`.
  */
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
     height: auto;
 }
 /**
@@ -336,11 +336,11 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
-input[type="search"] {
-    -webkit-appearance: textfield;
+input[type='search'] {
     /* 1 */
     
     box-sizing: content-box;
+    -webkit-appearance: textfield;
     /* 2 */
 }
 /**
@@ -349,8 +349,8 @@ input[type="search"] {
  * padding (and `textfield` appearance).
  */
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 /**
@@ -358,9 +358,9 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-    border: 1px solid #c0c0c0;
     margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+    padding: .35em .625em .75em;
+    border: 1px solid #c0c0c0;
 }
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -368,10 +368,10 @@ fieldset {
  */
 
 legend {
-    border: 0;
     /* 1 */
     
     padding: 0;
+    border: 0;
     /* 2 */
 }
 /**
@@ -396,8 +396,8 @@ optgroup {
  */
 
 table {
-    border-collapse: collapse;
     border-spacing: 0;
+    border-collapse: collapse;
 }
 
 td,

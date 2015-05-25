@@ -1,25 +1,27 @@
-
 /* grid
    ========================================================================== */
+
+.wrapper {
+	width: 320px;
+}
+
 
 // col-xs-6
 // col-md-6
 // col-lg-6
 
 
+// $n: 12;
+// @for $i from 1 through 12 {
+//     .col-# {
+//         $i
+//     }
+//     {
+//         width: ($i * 89% / $n);
+//         margin-right: 1%;
+//     }
+// }
 
-
-
-$n: 12;
-@for $i from 1 through 12 {
-	.col-#{$i} {
-		width: ($i * 89% / $n);
-	margin-right: 1%;
-	}
-}
-.col-12 {
-	margin-right: 0;
-}
-
-
-
+// .col-12 {
+//     margin-right: 0;
+// }

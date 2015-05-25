@@ -1,42 +1,44 @@
 /* page-footer
    ========================================================================== */
-
+.page-footer__wrapper {
+    width: 320px;
+}
 .page-footer {
     text-align: center;
     pagging-top: 40px;
     &__visitsedona {
-        color: $black;
-        display: block;
         font-size: 1.6rem;
         line-height: 100px;
+        display: block;
         vertical-align: middle;
+        color: $black;
     }
     &__made-by {
-        color: $black;
-        display: inline-block;
-        margin: auto;
-        width: 200px;
+        font-size: .8rem;
         line-height: 100px;
+        display: inline-block;
+        width: 200px;
+        margin: auto;
         vertical-align: middle;
-        font-size: 0.8rem;
         text-transform: uppercase;
+        color: $black;
     }
     &__made-by img {
-        display: inline-block;
         line-height: 100px;
+        display: inline-block;
         vertical-align: middle;
     }
 }
 
 .social-links {
     a {
+        line-height: 42px;
+        display: inline-block;
+        width: 42px;
+        margin-right: 1em;
+        vertical-align: middle;
         color: $white;
         background: $blue;
-        display: inline-block;
-        vertical-align: middle;
-        width: 42px;
-        line-height: 42px;
-        margin-right: 1em;
         &:last-child {
             margin-right: 0;
         }

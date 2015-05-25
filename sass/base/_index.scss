@@ -1,0 +1,143 @@
+// /* advertising
+//    ========================================================================== */
+
+.advertising {
+    &__picture-village {
+        height: 260px;
+        // width: 1200px;h
+        // height: 260px;
+        background: url("../img/sedona-village.jpg") 0 0 no-repeat;
+        background-size: cover;
+    }
+    &__picture-bridge {
+        height: 260px;
+        // width: 1200px;
+        // height: 260px;
+        background: url("../img/diabolo-bridge.jpg") 0 0 no-repeat;
+        background-size: cover;
+    }
+    &__recommendation {
+        text-align: left;
+    }
+    &__intro {
+        position: relative;
+        @include pad(2.2em 3.2em 2.8em 3.2em);
+        text-align: center;
+        &:after {
+            position: absolute;
+            z-index: 50;
+            bottom: -18px;
+            width: 768px;
+            height: 37px;
+            left: calc((50% - 385px);
+            content: '';
+            background: url("../img/mask-small.png") 0 0 no-repeat;
+            background-size: cover;
+        }
+        h1 + p {
+            margin-top: 2.2em;
+        }
+    }
+    &__reasons-to-travel {
+        margin-bottom: .9em;
+    }
+    &__point-interest {
+        @include white-color-blue-bg( $white);
+        &--text {
+            @include pad(4.9em 3.2em 3.8em 3.2em);
+            text-align: center;
+            h1 {
+                margin-bottom: .5em;
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+    &__dwell {
+        position: relative;
+        @include pad(2.6em 3.2em 0 8em);
+        &:before {
+            position: absolute;
+            top: 2.2em;
+            left: 3em;
+            width: 38px;
+            height: 38px;
+            content: '';
+            background: url("../img/icons-house.svg") 0 0 no-repeat;
+        }
+    }
+    &__gift {
+        position: relative;
+        @include pad(2em 3.2em 0 8em);
+        &:before {
+            position: absolute;
+            top: 2.2em;
+            left: 3em;
+            width: 38px;
+            height: 38px;
+            content: '';
+            background: url("../img/icons-gift.svg") 0 0 no-repeat;
+        }
+    }
+    &__hamburger {
+        position: relative;
+        @include pad(2em 3.1em 4em 8em);
+        &:before {
+            position: absolute;
+            top: 2.2em;
+            left: 3em;
+            width: 38px;
+            height: 38px;
+            content: '';
+            background: url("../img/icons-big-mag.svg") 0 0 no-repeat;
+        }
+    }
+    &__interes {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 1.4em;
+        text-transform: uppercase;
+    }
+    &__hotel-booking--text {
+        @include pad(3.1em 0 5em 0);
+        p {
+            margin-bottom: 2.5em;
+        }
+    }
+    &__preference--text {
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            content: '';
+            background: $gray-third;
+        }
+    }
+    &__preference {
+        text-align: center;
+        background: $gray;
+        &--text {
+            padding-top: 1.6em;
+            padding-bottom: 3em;
+            text-align: center;
+            h1 {
+                margin-bottom: .5em;
+            }
+        }
+    }
+    &__hotel-booking {
+        position: relative;
+        text-align: center;
+        input[type='submit'] {
+            display: inline-block;
+        }
+        &__interes {
+            // font-size: 2.1rem;
+        }
+    }
+}
