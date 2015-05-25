@@ -108,18 +108,18 @@
 }
 
 @mixin clearfix {
-    .clearfix:before {
+    &:before {
         display: table;
         content: ' ';
     }
-    .clearfix:after {
+    &:after {
         display: table;
         clear: both;
         content: ' ';
     }
     /* IE6/7 support */
     
-    .clearfix {
+    & {
         *zoom: 1;
     }
 }

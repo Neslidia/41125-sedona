@@ -39,8 +39,8 @@
             <div class="review">
                 <header class="review__intro">
                     <div class="review__intro--text">
-                        <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-                        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+                        <h1>Оставьте свой отзыв</h1>
+                        <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
                     </div>
                 </header>
                 <section class="review__form">
@@ -64,11 +64,11 @@
                         </div>
                         <div class="review__impression">
                             <h2>Ваше общее впечатление:</h2>
-                            <div>
+                            <div class="review__impression--radio">
                                 <input type="radio" id="review__plus" name="review__opinion">
                                 <label for="review__plus">Скорее положительное</label>
                             </div>
-                            <div>
+                            <div class="review__impression--radio">
                                 <input type="radio" id="review__minus" name="review__opinion">
                                 <label for="review__minus">Скорее отрицательное</label>
                             </div>
@@ -81,7 +81,8 @@
                             </div>
                             <div>
                                 <label for="review__duration">длительность пребывания:</label>
-                                <input type="number" id="review__duration" id="review__duration" min="1" max="30" required value="14">
+                                <input type="number" id="review__duration" id="review__duration" min="1" max="30" step="1" required value="14">
+
                             </div>
                             <div>
                                 <label for="review__checkout">дата отъезда:</label>
@@ -92,24 +93,20 @@
                             <h2>кол-во путешественников:</h2>
                             <div class="review__travellers-count">
                                 <label for="review__travellers-count">количество путешественников:</label>
-                                <input type="number" id="review__travellers-count" min="1" max="5" required value="2">
+                                <input type="number" id="review__travellers-count" min="1" max="5" step="1" required value="2">
                             </div>
 
 
 
                             <div class="review__traveller">
-
-                                <header class="review__traveller-number">
+                                <div class="review__traveller-number">
                                     <div>№</div>
-                                    <div>
-                                        <label for="review__traveller-surname">Фамилия</label>
-                                    </div>
-                                </header>
-
+                                    <div>1</div>
+                                </div>
                                 <div class="review__traveller-fullname">
                                     <div class="review__traveller-surname">
                                         <div>
-                                            <input type="text" id="" name="" required placeholder="1">
+                                            <label for="review__traveller-surname">Фамилия</label>
                                         </div>
                                         <div>
                                             <input type="text" id="review__traveller-surname" name="review__traveller-surname" required placeholder="Иванов">
@@ -123,7 +120,7 @@
                                             <input type="text" id="review__traveller-name" name="review__traveller-name" required placeholder="Петр">
                                         </div>
                                     </div>
-                                    <div class="review__traveller-secondname">
+                                    <div class="review__traveller-patronymic">
                                         <div>
                                             <label for="review__traveller-secondname">Отчество</label>
                                         </div>
@@ -133,7 +130,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
 
                             <div class="review__traveller">
@@ -168,6 +164,11 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+                           
                         </div>
                         <div class="review__place">
                             <h2>посещенные достопримечательности:</h2>
@@ -191,45 +192,53 @@
                     </form>
                 </section>
                 <section class="review__pop-up">
-                    <div class="review__popup-failure">
-                        <div class="review__popup-failure--title">Что-то пошло не так!</div>
+                    <!--                     <div class="review__pop-up--failure">
+                        <div class="review__pop-up--title">Что-то пошло не так!</div>
                         <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-                        <a class="btn">ok</a>
-                    </div>
-                    <div class="review__popup-success">
-                        <div class="review__popup-success--title">Ваш отзыв отправлен!</div>
+          
+                            <a class="btn blue-btn">ok</a>
+    
+                    </div> -->
+                    <!--                     <div class="review__pop-up--success">
+                        <div class="review__pop-up--title">Ваш отзыв отправлен!</div>
                         <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-                        <a class="btn">Закрыть окно</a>
-                    </div>
+                        <div class="review__pop-up--button">
+                            <a class="btn blue-btn">Закрыть окно</a>
+                        </div>
+                    </div> -->
                 </section>
                 <section class="review__photo">
-                    <div class="photo__inside">
-                        <h3>Загрузите фотографии:</h3>
+                    <div class="review__inside">
+                        <h2>Загрузите фотографии:</h2>
                         <button type="">Выбрать фотографии</button>
                         <ul class="review__gallery">
                             <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
                                 <img src="img/coose-photo1.jpg" alt="">
-                                <p>IMG-686.jpg</p>
                             </li>
                             <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
                                 <img src="img/coose-photo2.jpg" alt="">
-                                <p>IMG-687.jpg</p>
                             </li>
                             <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
                                 <img src="img/coose-photo2.jpg" alt="">
-                                <p>IMG-688.jpg</p>
                             </li>
                             <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
                                 <img src="img/coose-photo3.jpg" alt="">
-                                <p>IMG-689.jpg</p>
                             </li>
                             <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
                                 <img src="img/coose-photo4.jpg" alt="">
-                                <p>IMG-690.jpg</p>
                             </li>
                             <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
                                 <img src="img/coose-photo5.jpg" alt="">
-                                <p>IMG-691.jpg</p>
+                            </li>
+                            <li class="review__gallery--item">
+                                <div class="review__gallery--circle"></div>
+                                <img src="img/coose-photo6.jpg" alt="">
                             </li>
                         </ul>
                         <button type="submit">Отправить отзыв</button>
