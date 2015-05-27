@@ -23,11 +23,24 @@
         text-transform: uppercase;
         color: $black;
     }
-    &__made-by img {
-        line-height: 100px;
-        display: inline-block;
-        vertical-align: middle;
-    }
+        &__made-by {
+            position: relative;
+            &:before {
+                position: absolute;
+                left: 0;
+                width: 61px;
+                height: 60px;
+                content: ""; 
+                top: 0;
+                @include circle;
+            }
+        }
+
+    // &__made-by img {
+    //     line-height: 100px;
+    //     display: inline-block;
+    //     vertical-align: middle;
+    // }
 }
 
 .social-links {
@@ -46,6 +59,7 @@
             display: none;
         }
     }
+
     // &__twitter {
     //     display: block;
     //     width: 42px;

@@ -138,16 +138,33 @@
     }
 }
 
+
+@mixin digital {
+    &--digital {
+        float: left;
+        width: 61px;
+        height: 60px;
+        margin-right: 6px;
+        text-align: center;
+        background: $gray-second;
+        &:last-child {
+            float: right;
+            margin-right: 0;
+        }
+    }
+    &--digital-big {
+        float: left;
+        width: 50%;
+    }
+}
+
+
+
 // // {@include container}
-@mixin linx ($link,
-$visit,
-$hover,
-$active) {
+@mixin link ($link, $hover, $active) {
     a {
         color: $link;
-        &:visited {
-            color: $visit;
-        }
+
         &:hover {
             color: $hover;
         }
@@ -156,3 +173,11 @@ $active) {
         }
     }
 }
+
+@mixin sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+    background-position: $x $y;
+    width: $width;
+    height: $height;
+}
+
+

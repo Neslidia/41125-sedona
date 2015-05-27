@@ -1,0 +1,74 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
+}
+
+.sprite {
+    background-image: url(spritesheet.png);    background-repeat: no-repeat;
+    display: block;
+
+    &.sprite-calendar {
+        .stitches-sprite(-5px, -5px, 61px, 60px);
+    }
+
+    &.sprite-calendar-active {
+        .stitches-sprite(-76px, -5px, 61px, 60px);
+    }
+
+    &.sprite-calendar-hover {
+        .stitches-sprite(-147px, -5px, 61px, 60px);
+    }
+
+    &.sprite-circle {
+        .stitches-sprite(-5px, -75px, 60px, 60px);
+    }
+
+    &.sprite-circle-active {
+        .stitches-sprite(-75px, -75px, 60px, 60px);
+    }
+
+    &.sprite-circle-hover {
+        .stitches-sprite(-145px, -75px, 60px, 60px);
+    }
+
+    &.sprite-client {
+        .stitches-sprite(-215px, -75px, 61px, 60px);
+    }
+
+    &.sprite-client-active {
+        .stitches-sprite(-5px, -145px, 61px, 60px);
+    }
+
+    &.sprite-client-hover {
+        .stitches-sprite(-76px, -145px, 61px, 60px);
+    }
+
+    &.sprite-minus {
+        .stitches-sprite(-147px, -145px, 61px, 60px);
+    }
+
+    &.sprite-minus-active {
+        .stitches-sprite(-5px, -215px, 61px, 60px);
+    }
+
+    &.sprite-minus-hover {
+        .stitches-sprite(-76px, -215px, 61px, 60px);
+    }
+
+    &.sprite-plus {
+        .stitches-sprite(-147px, -215px, 61px, 60px);
+    }
+
+    &.sprite-plus-active {
+        .stitches-sprite(-218px, -5px, 61px, 58px);
+    }
+
+    &.sprite-plus-hover {
+        .stitches-sprite(-286px, -73px, 61px, 60px);
+    }
+
+    &.sprite-sign {
+        .stitches-sprite(-286px, -143px, 61px, 60px);
+    }
+}
