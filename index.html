@@ -9,15 +9,15 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="js/toggle.js"></script>
 </head>
 
 <body>
-                <!-- PINK -->
-
-
-    <!-- <header class="page-header"> -->
+    <!-- PINK -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <header class="page-header">
         <!-- Mobile menu section is not visible in default -->
-<!--         <div class="page-header__wrapper">
+        <div class="page-header__wrap">
             <div class="page-header__logo">
                 <a class="page-header__logo-link" href="#">PINK</a>
             </div>
@@ -30,23 +30,19 @@
                 </ul>
                 <a href="#" class="main-nav__toggle"></a>
             </nav>
-        </div> -->
-        <!--     <div class="page-header__promo-block">
-        <a href="#" class="page-header__download-btn">Скачать приложение</a>
-        <div class="page-header__operation-system-section">
-            <img src="#" class="page-header__ios-img" alt="ios">
-            <img src="#" class="page-header__android-img" alt="android">
-            <img src="#" class="page-header__ios-windows" alt="windows">
-            <p class="page-header__operation-system-availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
-    </div> -->
-   <!--  </header> -->
-
-
-                     <!-- PINK -->
-
-    
-<header class="page-header">
+        <div class="page-header__promo-block">
+            <a href="#" class="page-header__download-btn">Скачать приложение</a>
+            <div class="page-header__operation-system-section">
+                <img src="#" class="page-header__ios-img" alt="ios">
+                <img src="#" class="page-header__android-img" alt="android">
+                <img src="#" class="page-header__ios-windows" alt="windows">
+                <p class="page-header__operation-system-availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
+        </div>
+    </header>
+    <!-- PINK -->
+    <!-- <header class="page-header">
     <div class="wrapper">
         <nav class="page-nav">
             <ul class="page-nav__list">
@@ -68,14 +64,7 @@
             </div>
         </div>
     </div>
-</header>
-
-
-
-
-
-
-
+</header> -->
     <main class="page-main">
         <div class="wrapper">
             <div class="advertising">
@@ -85,25 +74,15 @@
                         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
                     </div>
                 </header>
-
-
-
                 <section class="advertising__point-interest">
-
                     <div class="advertising__point-interest--text">
                         <h1>настоящий городок</h1>
                         <p class="advertising__reasons-to-travel"> — №2 — </p>
                         <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
                     </div>
-
                     <div class="advertising__picture-village">
-                        
                     </div>
-
                 </section>
-
-
-
                 <section class="advertising__recommendation">
                     <div class="advertising__dwell">
                         <div class="advertising__dwell--picture"></div>
@@ -121,25 +100,15 @@
                         <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                     </div>
                 </section>
-
-
-
                 <section class="advertising__point-interest">
-
                     <div class="advertising__point-interest--text">
                         <h1>там есть мост дьявола</h1>
                         <p class="advertising__reasons-to-travel"> — №2 — </p>
                         <p>да, по нему можно пройти! если вы осмелитесь</p>
                     </div>
-
                     <div class="advertising__picture-bridge">
-                        
                     </div>
-
                 </section>
-
-
-
                 <section class="advertising__preference">
                     <div class="advertising__preference--text">
                         <h1>небольшая площадь</h1>
@@ -173,9 +142,6 @@
             </div>
         </div>
     </main>
-
-
-
     <footer class="page-footer">
         <div class="wrapper">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
@@ -184,15 +150,11 @@
                 <a href="#" class="social-links__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
                 <a href="#" class="social-links__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
             </div>
-            <a class="page-footer__made-by" href="#">Разработано &nbsp;&nbsp;<img class="" src="img/icons-client.png"></a>
+            <a class="page-footer__made-by" href="#">Разработано<div class="sprite client"></div><!-- <img class="" src="img/icons-client.png"> --></a>
         </div>
     </footer>
-
-
-
     <script src="js/toggle.js"></script>
     <script>
-
     $('.main-nav__toggle').on('click', function() {
         $('.page-header__wrap').toggleClass('page-header__wrap--open');
         $('.main-nav__list').toggle();

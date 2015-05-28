@@ -21,7 +21,7 @@
 
 .post__content {
     position: relative;
-    @include gray-line;
+    @include gray-line(84%);
     @include pad(35px 20px 37px);
     @include when-happen;
     @include what-happen;
@@ -73,7 +73,7 @@
         line-height: 1.8;
         position: relative;
         text-transform: uppercase;
-        @include gray-line;
+        @include gray-line(84%);
         @include margin(28px 20px 0 20px);
         @include pad(0 0 20px);
         &:before {

@@ -2,106 +2,14 @@
 //    ========================================================================== */
 
 
-
-@mixin minus {
-    &.minus {
-        @include sprite(-147px, -145px, 61px, 60px);
-        &:hover {
-            @include sprite(-76px, -215px, 61px, 60px);
-        }
-        &:active {
-            @include sprite(-5px, -215px, 61px, 60px);
-        }
-    }
-}
-
-@mixin plus {
-    &.plus {
-        @include sprite(-147px, -215px, 61px, 60px);
-        &:hover {
-            @include sprite(-286px, -73px, 61px, 60px);
-        }
-        &:active {
-            @include sprite(-218px, -5px, 61px, 58px);
-        }
-    }
-}
-
-@mixin client {
-    &.client {
-        @include sprite(-215px, -75px, 61px, 60px);
-        &:hover {
-            @include sprite(-76px, -145px, 61px, 60px);
-        }
-        &:active {
-            @include sprite(-5px, -145px, 61px, 60px);
-        }
-    }
-}
-
-@mixin circle {
-    &.circle {
-        @include sprite(-5px, -75px, 60px, 60px);
-        &:hover {
-            @include sprite(-145px, -75px, 60px, 60px);
-        }
-        &:active {
-            @include sprite(-75px, -75px, 60px, 60px);
-        }
-    }
-}
-
-@mixin calendar {
-    &.calendar {
-        @include sprite(-5px, -5px, 61px, 60px);
-        &:hover {
-            @include sprite(-147px, -5px, 61px, 60px);
-        }
-        &:active {
-            @include sprite(-76px, -5px, 61px, 60px);
-        }
-    }
-}
-
-@mixin sign {
-    &.sign {
-        @include sprite(-286px, -143px, 61px, 60px);
-    }
-}
-
 .sprite {
-    display: block;
-    background-image: url('../img/spritesheet.png');
-    background-repeat: no-repeat;
-    @include minus;
-    @include plus;
-    @include client;
-    @include circle;
+    @include sprite;
     @include calendar;
+    @include circle;
+    @include client;
+    @include plus;
     @include sign;
+    @include minus;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

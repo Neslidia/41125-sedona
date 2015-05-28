@@ -1,25 +1,29 @@
 @import 'base/normalize';
 @import 'base/variables';
 @import 'base/mixin';
-@import 'base/sprite';
+
 @import 'base/grid';
 @import 'base/button';
 @import 'base/typography';
 @import 'base/page-header';
 @import 'base/index';
 @import 'base/page-footer';
-@import 'base/icomoon';
 @import 'base/blog';
 @import 'base/form';
 @import 'base/post';
 @import 'font-scss/font-awesome';
+@import 'base/sprite';
+
 
 
 
 /* mini-reset
    ========================================================================== */
-
+* {
+	box-sizing: border-box;
+	}
 body {
+	// @include box-sizing;
     font-family: $font-family;
     font-size: 10px;
 }

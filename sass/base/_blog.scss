@@ -12,7 +12,7 @@
 
 .blog__intro {
     position: relative;
-    @include gray-line;
+    @include gray-line(84%);
     @include pad(38px 20px 13px);
     @include when-happen;
     @include what-happen;
@@ -32,7 +32,7 @@
 
 .blog-item {
     position: relative;
-    @include gray-line;
+    @include gray-line(84%);
     @include pad(35px 20px 37px);
     @include when-happen;
     @include what-happen;
