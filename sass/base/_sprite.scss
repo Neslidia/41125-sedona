@@ -2,14 +2,109 @@
 //    ========================================================================== */
 
 
+@mixin stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+    background-position: $x $y;
+    width: $width;
+    height: $height;
+}
+
+@mixin sprite {
+    background-image: url("../img/spritesheet-last.png");
+    display: block;
+    background-repeat: no-repeat;
+}
+
+
+
+@mixin calendar {
+    &.calendar {
+        @include stitches-sprite(-5px, -5px, 61px, 60px);
+        &:hover {
+            @include stitches-sprite(-147px, -5px, 61px, 60px);
+        }
+        &:active {
+            @include stitches-sprite(-76px, -5px, 61px, 60px);
+        }
+    }
+}
+
+@mixin circle {
+    &.circle {
+        @include stitches-sprite(-218px, -5px, 61px, 60px);
+        &:hover {
+            @include stitches-sprite(-76px, -75px, 61px, 60px);
+        }
+        &:active {
+            @include stitches-sprite(-5px, -75px, 61px, 60px);
+        }
+    }
+}
+
+@mixin client {
+    &.client {
+        @include stitches-sprite(-147px, -75px, 61px, 60px);
+        &:hover {
+            @include stitches-sprite(-5px, -145px, 61px, 60px);
+        }
+        &:active {
+            @include stitches-sprite(-218px, -75px, 61px, 60px);
+        }
+    }
+}
+
+@mixin minus {
+    &.minus {
+        @include stitches-sprite(-76px, -145px, 61px, 60px);
+        &:hover {
+            @include stitches-sprite(-218px, -145px, 61px, 60px);
+        }
+        &:active {
+            @include stitches-sprite(-147px, -145px, 61px, 60px);
+        }
+    }
+}
+
+@mixin plus {
+    &.plus {
+        @include stitches-sprite(-5px, -215px, 61px, 60px);
+        &:hover {
+            @include stitches-sprite(-147px, -215px, 61px, 60px);
+        }
+        &:active {
+            @include stitches-sprite(-76px, -215px, 61px, 60px);
+        }
+    }
+}
+
+@mixin sign {
+    &.sign {
+        @include stitches-sprite(-218px, -215px, 61px, 60px);
+    }
+}
+
+@mixin what {
+    &.what {
+        @include stitches-sprite(-289px, -5px, 61px, 60px);
+    }
+}
+
+@mixin when {
+    &.when {
+        @include stitches-sprite(-289px, -75px, 61px, 60px);
+    }
+}
+
+
 .sprite {
     @include sprite;
     @include calendar;
     @include circle;
     @include client;
     @include plus;
-    @include sign;
     @include minus;
+    @include sign;
+    @include what;
+    @include when;
 }
 
 

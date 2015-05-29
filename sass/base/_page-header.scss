@@ -1,12 +1,57 @@
 /* page-header
    ========================================================================== */
 
+.page-nav {
+    position: relative;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $blue;
+    &__list {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    &__list a {
+        border-top: 1px solid $blue-light;
+        border-bottom: 1px solid $blue-dark;
+    }
+    & a {
+        font-size: 1.12rem;
+        font-weight: bold;
+        line-height: 2.6;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+    }
+    &__toggle {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        &:before {
+            font-family: FontAwesome;
+            content: '\f0c9';
+            // color: red;
+            color: $blue;
+        }
+        &:after {
+            font-family: FontAwesome;
+            content: '\f00d';
+        }
+    }
+}
+
+// -----------------------------------------------------------------------
 .page-header {
     &__wrapper {
         width: 320px;
+        margin: 0 auto;
     }
-
-
     &__banner.index {
         position: relative;
         overflow: hidden;
@@ -14,11 +59,11 @@
         &:before {
             position: absolute;
             z-index: 50;
-            top: 68px;
+            top: 50px;
             width: 320px;
             height: 313px;
             content: '';
-            background: url("../img/sedona-banner-lettering.png") 0 0 no-repeat;
+            background: url('../img/sedona-banner-lettering.png') 0 0 no-repeat;
         }
         &:after {
             position: absolute;
@@ -28,14 +73,17 @@
             height: 37px;
             left: calc((50% - 385px);
             content: '';
-            background: url("../img/mask.png") 0 0 no-repeat;
+            background: url('../img/mask.png') 0 0 no-repeat;
             background-size: cover;
         }
+        img {
+            max-width: 200%;
+            height: auto;
+        }
     }
-
-        &__banner.post,
-        &__banner.blog,
-        &__banner.form {
+    &__banner.post,
+    &__banner.blog,
+    &__banner.form {
         position: relative;
         overflow: hidden;
         height: 158px;
@@ -47,7 +95,7 @@
             width: 320px;
             height: 313px;
             content: '';
-            background: url("../img/sedona-lettering.png") 0 0 no-repeat;
+            background: url('../img/sedona-lettering.png') 0 0 no-repeat;
         }
         &:after {
             position: absolute;
@@ -57,186 +105,46 @@
             height: 37px;
             left: calc((50% - 385px);
             content: '';
-            background: url("../img/mask.png") 0 0 no-repeat;
+            background: url('../img/mask.png') 0 0 no-repeat;
             background-size: cover;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
-
-
-
-
-
-
-
+    &__logo {
+        position: relative;
+        padding: 23px;
+        background: $white;
+        & a {
+            line-height: none;
+            position: absolute;
+            z-index: 30;
+            left: calc(50% - 69px);
+            top: 0;
+        }
+    }
+    &__wrapper--open {
+        background: $blue;
+    }
+    &__promo-block {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    &__download-btn {
+        display: inline-block;
+        padding: 10px 30px;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+    &__operation-system-section {
+        padding-top: 20px;
+    }
     &__toggle-down {
         display: block;
         height: 60px;
         background: $white;
     }
 }
-
-.page-nav {
-    position: relative;
-    &__list-item {
-        font-size: 1.12rem;
-        font-weight: bold;
-        display: block;
-        padding-top: .8em;
-        padding-bottom: .8em;
-        transition: .25s;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $white;
-        border-top: 1px solid $blue-light;
-        border-bottom: 1px solid $blue-dark;
-        background: $blue;
-    }
-    &__logo {
-        position: absolute;
-        line-height: none;
-        left: calc(50% - 69px);
-        top: 100%;
-        z-index: 30;
-    }
-}
-
-// ß
-// #nav-toggle span,
-// #nav-toggle span:before,
-// #nav-toggle span:after {
-//     position: absolute;
-//     display: block;
-//     width: 35px;
-//     height: 5px;
-//     content: '';
-//     cursor: pointer;
-//     border-radius: 1px;
-//     background: white;
-// }
-// .page-header a {
-//     text-decoration: none;
-//     color: white;
-// }
-// .page-header__logo {
-//     padding: 10px;
-// }
-// .page-header__wrap {
-//     position: relative;
-// }
-// .page-header__wrap--open {
-//     background: #283645;
-// }
-// .main-nav {
-//     position: absolute;
-//     top: 38px;
-//     width: 100%;
-//     background: #283645;
-// }
-// .main-nav__list {
-//     display: none;
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//     text-align: center;
-// }
-// .main-nav__list a {
-//     display: block;
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     text-transform: uppercase;
-//     border-top: 1px solid black;
-// }
-// .main-nav__toggle {
-//     position: absolute;
-//     top: -25px;
-//     right: 10px;
-// }
-// .main-nav__toggle:before {
-//     font-family: FontAwesome;
-//     content: '\f0c9';
-// }
-// .main-nav__toggle--close:before {
-//     font-family: FontAwesome;
-//     content: '\f00d';
-// }
-// .page-header__promo-block {
-//     padding-top: 50px;
-//     padding-bottom: 50px;
-//     text-align: center;
-// }
-// .page-header__download-btn {
-//     display: inline-block;
-//     padding: 10px 30px;
-//     border: 2px solid white;
-//     border-radius: 20px;
-// }
-// .page-header__operation-system-section {
-//     padding-top: 20px;
-// }
-// .page-header {
-//     width: 320px;
-//     margin: 0 auto;
-//     color: white;
-//     background: #1d2631;
-// }
-// .page-header a {
-//     text-decoration: none;
-//     color: white;
-// }
-// .page-header__logo {
-//     padding: 10px;
-// }
-// .page-header__wrap {
-//     position: relative;
-// }
-// .page-header__wrap--open {
-//     background: #283645;
-// }
-// .main-nav {
-//     position: absolute;
-//     top: 38px;
-//     width: 100%;
-//     background: #283645;
-// }
-// .main-nav__list {
-//     display: none;
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//     text-align: center;
-// }
-// .main-nav__list a {
-//     display: block;
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     text-transform: uppercase;
-//     border-top: 1px solid black;
-// }
-// .main-nav__toggle {
-//     position: absolute;
-//     top: -25px;
-//     right: 10px;
-// }
-// .main-nav__toggle:before {
-//     font-family: FontAwesome;
-//     content: '\f0c9';
-// }
-// .main-nav__toggle--close:before {
-//     font-family: FontAwesome;
-//     content: '\f00d';
-// }
-// .page-header__promo-block {
-//     padding-top: 50px;
-//     padding-bottom: 50px;
-//     text-align: center;
-// }
-// .page-header__download-btn {
-//     display: inline-block;
-//     padding: 10px 30px;
-//     border: 2px solid white;
-//     border-radius: 20px;
-// }
-// .page-header__operation-system-section {
-//     padding-top: 20px;
-// }

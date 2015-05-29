@@ -1,6 +1,51 @@
 /* blog
    ========================================================================== */
 
+@mixin when-happen {
+    &__when-happen {
+        font-size: .7rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $second-text-gray;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: $blue;
+        // background: url() 0 0 no-repeat;
+        top: 0;
+        left: -17px;
+    }
+    }
+}
+
+@mixin what-happen {
+    &__what-happen {
+        font-size: .7rem;
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        text-transform: uppercase;
+        color: $second-text-gray;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: $blue;
+        // background: url() 0 0 no-repeat;
+        top: 0;
+        left: -17px;
+    }
+    }
+}
+
+
+
 .blog {
     .marginalii {
         position: relative;
@@ -59,10 +104,13 @@
     &-item {
         display: inline-block;
         margin-right: 14px;
+        &:nth-child(4) {
+            margin-right: 0;
+        }
     }
     &-item a {
         @include pagination;
     }
 }
 
-//
+

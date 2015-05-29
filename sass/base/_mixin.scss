@@ -1,13 +1,11 @@
 // /* mixin
 //    ========================================================================== */
-
-
-@mixin box-sizing( $type: border-box ) {
+@mixin box-sizing( $type: border-box) {
     -webkit-box-sizing: $type;
-       -moz-box-sizing: $type;
-         -o-box-sizing: $type;
-        -ms-box-sizing: $type;
-            box-sizing: $type;
+    -moz-box-sizing: $type;
+    -o-box-sizing: $type;
+    -ms-box-sizing: $type;
+    box-sizing: $type;
 }
 
 @mixin pad ($pads...) {
@@ -45,47 +43,6 @@
         height: 2px;
         content: '';
         background: $gray-line;
-    }
-}
-
-@mixin when-happen {
-    &__when-happen {
-        font-size: .7rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: inline-block;
-        text-transform: uppercase;
-        color: $second-text-gray;
-        &:before {
-            position: absolute;
-            top: 2.2em;
-            left: 3em;
-            width: 38px;
-            height: 38px;
-            content: '';
-            background: url('../img/icon-plus.png') 0 0 no-repeat;
-        }
-    }
-}
-
-@mixin what-happen {
-    &__what-happen {
-        font-size: .7rem;
-        position: absolute;
-        right: 15px;
-        bottom: 0;
-        text-transform: uppercase;
-        color: $second-text-gray;
-        &:before {
-            position: absolute;
-            top: 2.2em;
-            left: 3em;
-            width: 38px;
-            height: 38px;
-            content: '';
-            background: url('../img/icon-plus.png') 0 0 no-repeat;
-        }
     }
 }
 
@@ -167,9 +124,7 @@
     }
 }
 
-@mixin link ($link,
-$hover,
-$active) {
+@mixin link ($link, $hover, $active) {
     a {
         color: $link;
         &:hover {
@@ -180,17 +135,6 @@ $active) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @mixin gray-btn ($link, $hover, $active) {
     a {
@@ -204,88 +148,3 @@ $active) {
     }
 }
 
-
-
-
-
-@mixin stitches-sprite($x: 0,
-$y: 0,
-$width: 0,
-$height: 0) {
-    width: $width;
-    height: $height;
-    background-position: $x $y;
-}
-
-@mixin minus {
-    &.minus {
-        @include stitches-sprite(-147px, -145px, 61px, 60px);
-        &:hover {
-            @include stitches-sprite(-76px, -215px, 61px, 60px);
-        }
-        &:active {
-            @include stitches-sprite(-5px, -215px, 61px, 60px);
-        }
-    }
-}
-
-@mixin calendar {
-    &.calendar {
-        @include stitches-sprite(-5px, -5px, 61px, 60px);
-        &:hover {
-            @include stitches-sprite(-147px, -5px, 61px, 60px);
-        }
-        &:active {
-            @include stitches-sprite(-76px, -5px, 61px, 60px);
-        }
-    }
-}
-
-@mixin circle {
-    &.circle {
-        @include stitches-sprite(-5px, -75px, 60px, 60px);
-        &:hover {
-            @include stitches-sprite(-145px, -75px, 60px, 60px);
-        }
-        &:active {
-            @include stitches-sprite(-75px, -75px, 60px, 60px);
-        }
-    }
-}
-
-@mixin client {
-    &.client {
-        @include stitches-sprite(-215px, -75px, 61px, 60px);
-        &:hover {
-            @include stitches-sprite(-76px, -145px, 61px, 60px);
-        }
-        &:active {
-            @include stitches-sprite(-5px, -145px, 61px, 60px);
-        }
-    }
-}
-
-@mixin plus {
-    &.plus {
-        @include stitches-sprite(-147px, -215px, 61px, 60px);
-        &:hover {
-            @include stitches-sprite(-286px, -73px, 61px, 60px);
-            ;
-        }
-        &:active {
-            @include stitches-sprite(-218px, -5px, 61px, 58px);
-        }
-    }
-}
-
-@mixin sign {
-    &.sign {
-        @include stitches-sprite(-286px, -143px, 61px, 60px);
-    }
-}
-
-@mixin sprite {
-    display: block;
-    background-image: url('../img/spritesheet.png');
-    background-repeat: no-repeat;
-}

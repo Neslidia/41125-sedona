@@ -1,27 +1,32 @@
-@import 'base/normalize';
-@import 'base/variables';
-@import 'base/mixin';
-
-@import 'base/grid';
-@import 'base/button';
-@import 'base/typography';
-@import 'base/page-header';
-@import 'base/index';
-@import 'base/page-footer';
-@import 'base/blog';
-@import 'base/form';
-@import 'base/post';
-@import 'font-scss/font-awesome';
-@import 'base/sprite';
+@import "base/normalize";
+@import "base/variables";
+@import "base/mixin";
+@import "base/grid";
+@import "base/button";
+@import "base/typography";
+@import "base/page-header";
+@import "base/index";
+@import "base/page-footer";
+@import "base/blog";
+@import "base/form";
+@import "base/post";
+@import "font-scss/font-awesome";
+@import "base/sprite";
 
 
 
 
 /* mini-reset
    ========================================================================== */
+
+
 * {
-	box-sizing: border-box;
-	}
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
 	// @include box-sizing;
     font-family: $font-family;
@@ -40,3 +45,4 @@ a {
 li {
     list-style: none;
 }
+

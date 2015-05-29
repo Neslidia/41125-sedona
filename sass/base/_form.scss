@@ -30,6 +30,17 @@
     @include pad (19px 39px 18px 39px);
 }
 
+@mixin sprite-after ($height, $width, $left, $top) {
+    position: absolute;
+    content: "";
+    top: $height;
+    right: $width;
+    background: url("../img/spritesheet-last.png") $left $left no-repeat;
+    width: 61px;
+    height: 60px;
+}
+
+
 // ------------------------------------------------------------------------------
 .review {
     &__intro {
@@ -350,6 +361,57 @@ label {
     text-transform: uppercase;
     color: $text-color;
 }
+
+.review__fullname-surname {
+    position: relative;
+    &:after {
+        @include sprite-after(-28px, 152px, -218px, -215px);
+    }
+}
+
+.review__fullname-name {
+    position: relative;
+    &:after {
+        @include sprite-after(-28px, 189px, -218px, -215px);
+    }
+}
+
+.review__checkin {
+    position: relative;
+    &:after {
+        @include sprite-after(-28px, 118px, -218px, -215px);
+    }
+}
+
+.review__duration {
+    position: relative;
+    &:after {
+        @include sprite-after(-28px, 18px, -218px, -215px);
+    }
+}
+
+// .review__checkout {
+//     position: relative;
+//     &:after {
+//         @include sprite-after(54px, 153px, -218px, -215px);
+//     }
+// }
+
+// .review__travellers-count {
+//     position: relative;
+//     &:after {
+//         @include sprite-after(-28px, 153px, -218px, -215px);
+//     }    
+// }
+
+// .review__traveller1-surname {
+//      position: relative;
+//     &:after {
+//         @include sprite-after(54px, 153px, -218px, -215px);
+//     }     
+// }
+
+
 
 // button {
 //     font-size: 18px;

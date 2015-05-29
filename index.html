@@ -9,64 +9,37 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script src="js/toggle.js"></script>
+    <!--   // <script src="js/toggle.js"></script> -->
 </head>
 
 <body>
     <!-- PINK -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <header class="page-header">
-        <!-- Mobile menu section is not visible in default -->
-        <div class="page-header__wrap">
-            <div class="page-header__logo">
-                <a class="page-header__logo-link" href="#">PINK</a>
-            </div>
-            <nav class="main-nav">
-                <ul class="main-nav__list">
+        <div class="page-header__wrapper">
+            <nav class="page-nav">
+                <ul class="page-nav__list">
+                    <li><a href="#">Карта штата</a></li>
                     <li><a href="#">Информация</a></li>
-                    <li><a href="#">Возможности</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Стоимость</a></li>
+                    <li><a href="#">Фото и видео</a></li>
+                    <li><a href="#">Гостиницы</a></li>
                 </ul>
-                <a href="#" class="main-nav__toggle"></a>
+                <a href="#" class="page-nav__toggle"></a>
             </nav>
-        </div>
-        <div class="page-header__promo-block">
-            <a href="#" class="page-header__download-btn">Скачать приложение</a>
-            <div class="page-header__operation-system-section">
-                <img src="#" class="page-header__ios-img" alt="ios">
-                <img src="#" class="page-header__android-img" alt="android">
-                <img src="#" class="page-header__ios-windows" alt="windows">
-                <p class="page-header__operation-system-availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <div class="page-header__logo">
+                <a href="#">
+                    <img src="img/sedona-logo.png" alt="City of Sedona">
+                </a>
+            </div>
+            <div class="page-header__banner index">
+                <div class="page-header__banner-picture">
+                    <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
+                </div>
             </div>
         </div>
     </header>
-    <!-- PINK -->
-    <!-- <header class="page-header">
-    <div class="wrapper">
-        <nav class="page-nav">
-            <ul class="page-nav__list">
-                <li><a class="page-nav__list-item" href="#">Карта штата</a></li>
-                <li><a class="page-nav__list-item" href="#">Информация</a></li>
-                <li><a class="page-nav__list-item" href="#">Фото и видео</a></li>
-                <li><a class="page-nav__list-item" href="#">Гостиницы</a></li>
-                <li class="page-nav__logo">
-                    <a href="#">
-                        <img src="img/sedona-logo.png" alt="City of Sedona">
-                    </a>
-                </li>
-            </ul>
-            <a href="#" class="main-nav__toggle"></a>
-        </nav>
-        <div class="page-header__banner index">
-            <div class="page-header__banner-picture">
-                <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
-            </div>
-        </div>
-    </div>
-</header> -->
     <main class="page-main">
-        <div class="wrapper">
+        <div class="page-main__wrapper">
             <div class="advertising">
                 <header class="advertising__intro">
                     <div class="advertising__intro--text">
@@ -143,7 +116,7 @@
         </div>
     </main>
     <footer class="page-footer">
-        <div class="wrapper">
+        <div class="page-footer__wrapper">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
             <div class="social-links">
                 <a href="#" class="social-links__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
@@ -153,13 +126,8 @@
             <a class="page-footer__made-by" href="#">Разработано<div class="sprite client"></div><!-- <img class="" src="img/icons-client.png"> --></a>
         </div>
     </footer>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/toggle.js"></script>
-    <script>
-    $('.main-nav__toggle').on('click', function() {
-        $('.page-header__wrap').toggleClass('page-header__wrap--open');
-        $('.main-nav__list').toggle();
-    });
-    </script>
 </body>
 
 </html>
