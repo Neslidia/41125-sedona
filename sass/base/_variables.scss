@@ -2,6 +2,7 @@
 
 $white: #ffffff;
 $black: #000000;
+$text-color: #333333;
 $gray: #eeeeee;
 $brown: #604e43;
 $brown-down: #766357;
@@ -19,20 +20,15 @@ $gray-down: #d5d5d5;
 $gray-forth: #b8b8b8; 
 $headings-color: $black;
 $text-color-white: $white;
-$text-color: #333333;
+
 $second-text-gray: #999999;
 $html-size-baze: 10px;
 $font-size-p: 0.9rem;
 $line-height: 1em;
 $margin-bottom: 1em;
 $headings-weight:700;
-$font-size--h1: 1rem;
-$font-size--h2:;
-$font-size--h3:;
-$font-size--h4:;
-$font-size--h5:;
-$font-size--h6:;
-$font-family: 'PT Sans',sans-serif;
+
+$font-family: "PT Sans",sans-serif;
 $font-family--headings:;
 $screen-xs: 480px;
 $screen-md: 768px;
@@ -40,9 +36,9 @@ $screen-lg: 1200px;
 $props:;
 $animal:;
 
-// $screen_min: 320px;
-// $screen_md: 700px;
-// $screen_lg: 1040px;
+$screen_min: 320px;
+$screen_md: 700px;
+$screen_lg: 1040px;
 
 
 

@@ -18,16 +18,15 @@
         background: transparent;
     }
 }
-@mixin button($text-color-white, $blue) {
-    font-size: 18px;
-    font-style: normal;
+
+@mixin button($blue) {
     width: 100%;
-    margin-bottom: 10px;
     text-align: center;
-    color: $text-color-white;
+    text-transform: uppercase;
     border: none;
+    outline: none;
     background-color: $blue;
-    @include pad (19px 39px 18px 39px);
+    @include pad (17px 39px 17px 39px);
 }
 
 @mixin sprite-after ($height, $width, $left, $top) {
@@ -40,102 +39,177 @@
     height: 60px;
 }
 
+// .review__intro 
+// -------------------------------------------------------------
+.review__intro {
+    position: relative;
+    text-align: center;
+    @include gray-line(320px);
+    @include pad(7.3em 3.2em .4em 3.2em);
+    & h1 {
+        @include head(1.1rem, 1.55, $text-color);
+        @include margin(0 0 1.5em);
+    }
+    & p {
+        @include body(1.1rem, 400, 1.36, none, $text-color);
+        @include margin(0 0 17px);
+    }
+}
 
-// ------------------------------------------------------------------------------
-.review {
-    &__intro {
-        position: relative;
-        text-align: center;
-        @include gray-line(320px);
-        @include pad(60px 3.2em 2.8em 3.2em);
-        h1 {
-            font-size: 1.1rem;
-            line-height: 1.55;
-            text-align: center;
-        }
-        h1 + p {
-            margin-top: 2.2em;
-        }
+// review__form
+// -------------------------------------------------------------
+// .review__introduce   
+// ----------------------------------------
+// 
+.review__introduce {
+    position: relative;
+    @include gray-line(320px);
+    @include pad(1.7em 0 1em 0);
+    & input {
+        // @include input (297px);
+        @include input (280px);
     }
-    // intro
-    // ------------------------------------------------------------------------------
-    &__introduce {
-        position: relative;
-        @include gray-line(320px);
-        @include pad(18px 0 8px 0);
-        & input {
-            // @include input (297px);
-            @include input (282px);
-        }
+    & h2 {
+        @include head(1.1rem, 1.55, $text-color);
+        @include margin(0 0 1.5em);
     }
-    &__fullname {
+}
+
+.review__fullname {
+    @include pad(0 20px);
+}
+
+// .review__impression   
+// ----------------------------------------
+// 
+.review__impression {
+    position: relative;
+    @include gray-line(320px);
+    @include pad (18px 0 6px 0);
+    & h2 {
+        @include head(1.1rem, 1.55, $text-color);
+        @include margin(0 0 1.5em);
+    }
+    &--inside {
         @include pad(0 20px);
     }
-    // --------------------------------
-    &__impression {
-              &--inside {
-            @include pad(0 20px);
-        }
+    & label {
+        @include body(1.1rem, 700, 1.36, none, $text-color);
+        text-align: left;
+    }
+    &--radio {
         position: relative;
-        @include gray-line(320px);
-        @include pad (18px 0 8px 0);
-        &--radio {
-            position: relative;
-            margin: 20px 0 20px 0px;
-            div ~ div {
-              margin-top: 20px;
-            }
-        }
-
-        &__fullname ~ label:nth-child(1) {
-            position: relative;
-            &:before {
-                position: absolute;
-                content: "";
-            }
-        }
-        &__fullname ~ label:nth-child(1) {
-            position: relative;
-            &:before {
-                position: absolute;
-                content: "";
-            }
+        @include margin (36px 0 32px 0px);
+        div ~ div {
+            margin-top: 48px;
         }
     }
-    // impression
-    // --------------------------------
+    &__fullname ~ label:nth-child(1) {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+        }
+    }
+    &__fullname ~ label:nth-child(1) {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+        }
+    }
+}
+
+// .review__travel-time   
+// ----------------------------------------
+// 
+.review {
     &__travel-time {
         position: relative;
         @include gray-line(320px);
         @include pad (18px 0 8px 0);
+        & h2 {
+            @include head(1.1rem, 1.55, $text-color);
+            @include margin(0 0 1.3em);
+        }
         &--inside {
             @include pad(0 20px);
         }
-        &--departure-date input {
-            // @include input (297px);
-            @include input (282px);
-        }
-        &--arrival-date input {
-            // @include input (297px);
-            @include input (282px);
-        }
     }
-    #review__checkin {
-        border: 2px solid $gray-forth;
+    &__arrival-date input {
+        @include input (280px);
+    }
+    &__arrival-date {
+        display: inline-block;
+        @include margin(0 0 14px 0);
     }
     &__duration {
         position: relative;
-        @include clearfix;
-        @include digital;
+        margin-bottom: 14px;
+        &--digital {
+            display: inline-block;
+            vertical-align: top;
+            width: 61px;
+            height: 60px;
+            @include margin(0 3px 0 0);
+            text-align: center;
+            background: $gray-second;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &--input {
+            margin: 0 auto;
+            display: inline-block;
+            width: 145px;
+            height: 60px;
+            @include margin(0 3px 0 0);
+        }
+    }
+    &__departure-date input {
+        @include input (280px);
+    }
+    &__departure-date {
+        @include margin(0 0 14px 0);
     }
     &__duration input {
         @include input (145px);
     }
-    // --------------------------------
+    & #review__checkout {
+        border: 2px solid $gray-forth;
+    }
+    &__arrival-date {
+        position: relative;
+        &:after {
+            @include sprite-after(-24px, 118px, -218px, -215px);
+        }
+    }
+    &__duration {
+        position: relative;
+        &:after {
+            @include sprite-after(-24px, 18px, -218px, -215px);
+        }
+    }
+    &__departure-date {
+        position: relative;
+        &:after {
+            @include sprite-after(-24px, 118px, -218px, -215px);
+        }
+    }
+}
+
+// .review__travellers-reckon  
+// ----------------------------------------
+// 
+.review {
     &__travellers-reckon {
+        & h2 {
+            @include head(1.1rem, 1.55, $text-color);
+            @include margin(0 0 1.5em);
+        }
         position: relative;
         @include gray-line(320px);
-        @include pad (18px 0 8px 0);
+        @include pad (18px 0 11px 0);
         &--inside {
             @include pad(0 20px);
         }
@@ -143,7 +217,6 @@
     &__travellers-count {
         position: relative;
         @include clearfix;
-        @include digital;
     }
     &__traveller-number {
         display: inline-block;
@@ -154,6 +227,7 @@
     }
     &__traveller {
         @include clearfix;
+        @include margin (29px 0 0 0);
         &__traveller-number {
             display: inline-block;
             float: left;
@@ -180,20 +254,81 @@
             @include input (212px);
         }
     }
-    // --------------------------------
-    &__place {
-              &--inside {
-            @include pad(0 20px);
-        }
+    &__travellers-count {
         position: relative;
-        @include gray-line(320px);
-        @include pad (18px 0 8px 0);
-        &__place-where {
-            position: relative;
+        margin-bottom: 14px;
+        &:after {
+            @include sprite-after(-24px, -16px, -218px, -215px);
         }
     }
-    // pop-up
-    // ------------------------------------------------------------------------------
+    &__traveller-surname {
+        position: relative;
+        margin-bottom: 14px;
+        &:after {
+            @include sprite-after(-24px, 88px, -218px, -215px);
+        }
+    }
+    &__traveller-name {
+        position: relative;
+        margin-bottom: 14px;
+        &:after {
+            @include sprite-after(-24px, 122px, -218px, -215px);
+        }
+    }
+    &__traveller-patronymic {
+        margin-bottom: 14px;
+    }
+    &__fullname-surname {
+        position: relative;
+        &:after {
+            @include sprite-after(-24px, 152px, -218px, -215px);
+        }
+        margin-bottom: 14px;
+    }
+    &__fullname-secondname {
+        margin-bottom: 14px;
+    }
+    &__fullname-name {
+        position: relative;
+        &:after {
+            @include sprite-after(-24px, 189px, -218px, -215px);
+        }
+        margin-bottom: 14px;
+    }
+}
+
+// .review__place 
+// ----------------------------------------
+// 
+.review {
+    &__place {
+        position: relative;
+        @include gray-line(320px);
+        @include pad (18px 0 32px 0);
+        & h2 {
+            @include head(1.1rem, 1.55, $text-color);
+            @include margin(0 0 1.5em);
+        }
+        &--inside {
+            @include pad(0 20px);
+        }
+    }
+    &__place-where {
+        margin-top: 31px;
+    }
+    &__place-where label {
+        @include body(1.1rem, 700, 1.36, none, $text-color);
+        text-align: left;
+    }
+    &__place-where + .review__place-where {
+        margin-top: 57px;
+    }
+}
+
+// .review__pop-up 
+// -------------------------------------------------------------
+// 
+.review {
     &__pop-up {
         text-align: center;
         box-shadow: 0 1px 15px rgba(0, 0, 0, .3);
@@ -212,26 +347,32 @@
         background: $gray-second;
         @include pad (15px);
     }
-    // _photo
-    // ------------------------------------------------------------------------------
+}
+
+// .review__photo 
+// -------------------------------------------------------------
+.review {
     &__photo {
+        & h2 {
+            @include head(1.1rem, 1.55, $text-color);
+            @include margin(0 0 1em);
+        }
         @include pad(18px 0 8px 0);
         &--inside {
             @include pad(0 20px);
         }
         & button:nth-of-type(1) {
-          @include button($text-color, $gray-second)
+            @include head(1.1rem, 1.55, $text-color);
+            @include button($gray-second);
         }
         & button:nth-of-type(2) {
-          @include button($text-color-white, $blue)
+            @include head(1.1rem, 1.55, $text-color-white);
+            @include button($blue);
         }
-    }
-    &__photo h2 {
-        text-align: center;
     }
     &__gallery {
         font-size: 0;
-        margin-top: 35px;
+        @include margin(51px 0 12px 0);
     }
     &__gallery--item {
         font-size: 1rem;
@@ -239,8 +380,7 @@
         display: inline-block;
         width: 70px;
         height: 70px;
-        margin-right: 35px;
-        margin-bottom: 35px;
+        @include margin(0 35px 35px 0);
         &:nth-child(3n) {
             margin-right: 0;
         }
@@ -259,8 +399,7 @@
     }
 }
 
-// review
-// ------------------------------------------------------------------------------
+// ---------------------------------------------------------
 input[type='text'],
 input[type='password'],
 input[type='date'],
@@ -274,9 +413,11 @@ input[type='url'],
 input[type='checkbox'],
 textarea,
 select {
-    @include margin (0 0 14px 0);
     @include pad (15px 20px);
-    // @include input (279px);
+}
+
+input ~ label {
+    margin-top: 14px;
 }
 
 input[type='radio'],
@@ -288,37 +429,35 @@ input[type='radio'] ~ label {
     text-indent: 50px;
     &:before {
         position: absolute;
-        top: 5px;
-        left: 0;
-        width: 10px;
-        height: 10px;
-        margin-right: 20px;
+        top: 1px;
+        left: -2px;
+        width: 20px;
+        height: 20px;
         content: "";
         vertical-align: middle;
         border-radius: 50%;
         background: $gray-second;
-        box-shadow: 0 0 0 10px $gray-second;
+        box-shadow: 0 0 0 15px $gray-second;
     }
 }
 
 input[type='radio']:checked ~ label {
     &:before {
         position: absolute;
-        top: 5px;
-        left: 0;
-        width: 10px;
-        height: 10px;
-        margin-right: 20px;
+        top: 1px;
+        left: -2px;
+        width: 20px;
+        height: 20px;
         content: "";
         vertical-align: middle;
         border-radius: 50%;
         background: $text-color;
-        box-shadow: 0 0 0 10px $gray-second;
+        box-shadow: 0 0 0 15px $gray-second;
     }
 }
 
 input[type='checkbox'] ~ label {
-    text-indent: 50px;
+    text-indent: 58px;
     &:before {
         position: absolute;
         z-index: 1;
@@ -329,22 +468,36 @@ input[type='checkbox'] ~ label {
         margin-right: 20px;
         content: "";
         vertical-align: middle;
+        z-index: 10;
+    }
+    &:after {
+        position: absolute;
+        z-index: 1;
+        top: -14px;
+        left: -19px;
+        width: 54px;
+        height: 54px;
+        margin-right: 20px;
+        content: "";
+        vertical-align: middle;
+        background: $gray-second;
+        border-radius: 5px;
     }
 }
 
 input[type='checkbox']:checked ~ label {
     &:before {
-        top: 5px;
-        left: 0;
-        // position: absolute;
+        top: -2px;
+        left: -2px;
         display: inline-block;
-        width: 10px;
-        height: 12px;
+        width: 18px;
+        height: 23px;
         margin-right: 20px;
         content: "";
         transform: rotate(-135deg);
         vertical-align: middle;
-        box-shadow: 2px 2px 0 0 $text-color inset;
+        box-shadow: 5px 5px 0 0 #333333 inset;
+        z-index: 10;
     }
 }
 
@@ -362,80 +515,14 @@ label {
     color: $text-color;
 }
 
-.review__fullname-surname {
-    position: relative;
-    &:after {
-        @include sprite-after(-28px, 152px, -218px, -215px);
-    }
-}
-
-.review__fullname-name {
-    position: relative;
-    &:after {
-        @include sprite-after(-28px, 189px, -218px, -215px);
-    }
-}
-
-.review__checkin {
-    position: relative;
-    &:after {
-        @include sprite-after(-28px, 118px, -218px, -215px);
-    }
-}
-
-.review__duration {
-    position: relative;
-    &:after {
-        @include sprite-after(-28px, 18px, -218px, -215px);
-    }
-}
-
-// .review__checkout {
-//     position: relative;
-//     &:after {
-//         @include sprite-after(54px, 153px, -218px, -215px);
-//     }
-// }
-
-// .review__travellers-count {
-//     position: relative;
-//     &:after {
-//         @include sprite-after(-28px, 153px, -218px, -215px);
-//     }    
-// }
-
-// .review__traveller1-surname {
-//      position: relative;
-//     &:after {
-//         @include sprite-after(54px, 153px, -218px, -215px);
-//     }     
-// }
-
-
-
-// button {
-//     font-size: 18px;
-//     font-style: normal;
-//     width: 100%;
-//     margin-bottom: 10px;
-//     text-align: center;
-//     color: #fff;
-//     border: none;
-//     background-color: $blue;
-//     @include pad (19px 39px 18px 39px);
-// }
-
-h2 {
-    font-size: 1.16rem;
-    line-height: 1.55;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.review {
+// .media
+// -------------------------------------------------------------
+// 
+main {
     @media screen and (min-width: 320px) {
-        form {
-            max-width: 320px;
+        .page-main__wrapper {
+            max-width: $screen_min;
+            margin: 0 auto;
         }
     }
 }

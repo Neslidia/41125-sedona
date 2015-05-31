@@ -22,12 +22,21 @@
     & a {
         font-size: 1.12rem;
         font-weight: bold;
-        line-height: 2.6;
+        line-height: 3;
         display: block;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         color: $white;
+        background: $blue;
+        &:hover {
+            color: $text-color-white;
+            background: $blue-hover;
+        }
+        &:active {
+            color: $text-color-white;
+            background: $blue-down;
+        }
     }
     &__toggle {
         position: absolute;
@@ -35,14 +44,24 @@
         right: 25px;
         &:before {
             font-family: FontAwesome;
+            font-size: 1rem;
             content: '\f0c9';
-            // color: red;
             color: $blue;
         }
         &:after {
             font-family: FontAwesome;
             content: '\f00d';
         }
+    }
+    &:hover a.page-nav__toggle {
+        &:before {
+            font-family: FontAwesome;
+            content: '\f0c9';
+            color: transparent;
+        }
+    }
+    a.page-nav__toggle {
+        background: transparent;
     }
 }
 
@@ -59,7 +78,7 @@
         &:before {
             position: absolute;
             z-index: 50;
-            top: 50px;
+            top: 38px;
             width: 320px;
             height: 313px;
             content: '';
@@ -90,7 +109,7 @@
         &:before {
             position: absolute;
             z-index: 50;
-            top: 85px;
+            top: 42px;
             left: 65px;
             width: 320px;
             height: 313px;
@@ -115,7 +134,7 @@
     }
     &__logo {
         position: relative;
-        padding: 23px;
+        padding: 27px;
         background: $white;
         & a {
             line-height: none;

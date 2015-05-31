@@ -1,134 +1,11 @@
 // /* advertising
 //    ========================================================================== */
-
-// .page-header {
-//     width: 320px;
-//     margin: 0 auto;
-//     background: $blue;
-//     color: $white;
-//     font-size: 1.12rem;
-//     font-weight: bold;
-// }
-
-
-// .page-header a {
-//     color: $white;
-//     text-decoration: none;
-
-// }
-
-// .page-header__logo {
-//     padding: 27px;
-// background: $white;
-
-// }
-
-// .page-header__wrapper {
-//     position: relative;
-// }
-
-// .page-header__wrapper--open {
-//     background: $blue;
-
-// }
-
-// .page-nav {
-//     position: absolute;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     background: $blue;
-//     z-index: 50;
-
-// }
-
-// .page-nav__list {
-//     display: none;
-//     list-style: none;
-//     padding: 0;
-//     margin: 0;
-//     text-align: center;
-
-// }
-
-// .page-nav__list a {
-//     display: block;
-//     padding-top: .8em;
-//     padding-bottom: .8em;
-//     border-top: 1px solid $blue-light;
-//     border-bottom: 1px solid $blue-dark;
-
-// }
-
-// .page-nav__toggle {
-//     position: absolute;
-//     top: 15px;
-//     right: 25px;
-
-
-// }
-
-// .page-nav__toggle:before {
-//     content: "\f0c9";
-//     font-family: FontAwesome;
-//         color: $blue;
-
-// }
-
-// .page-nav__toggle--close:before {
-//     content: "\f00d";
-//     font-family: FontAwesome;
-
-// }
-
-// .page-header__promo-block {
-//     padding-top: 50px;
-//     padding-bottom: 50px;
-//     text-align: center;
-
-// }
-
-// .page-header__download-btn {
-//     display: inline-block;
-//     padding: 10px 30px;
-//     border: 2px solid white;
-//     border-radius: 20px;
-
-// }
-
-// .page-header__operation-system-section {
-//     padding-top: 20px;
-// }
-
-
-// -----------------------------------------------------
-
-    .page-main__wrapper {
-        width: 320px;
-          margin: 0 auto;
-    }
-
+// .advertising__intro 
+// -------------------------------------------------------------
 .advertising {
-    &__picture-village {
-        height: 260px;
-        // width: 1200px;h
-        // height: 260px;
-        background: url("../img/sedona-village.jpg") 0 0 no-repeat;
-        background-size: cover;
-    }
-    &__picture-bridge {
-        height: 260px;
-        // width: 1200px;
-        // height: 260px;
-        background: url("../img/diabolo-bridge.jpg") 0 0 no-repeat;
-        background-size: cover;
-    }
-    &__recommendation {
-        text-align: left;
-    }
     &__intro {
         position: relative;
-        @include pad(2.2em 3.2em 2.8em 3.2em);
+        @include pad(2.5em 3em 2.8em 3em);
         text-align: center;
         &:after {
             position: absolute;
@@ -141,34 +18,80 @@
             background: url("../img/mask-small.png") 0 0 no-repeat;
             background-size: cover;
         }
-        h1 + p {
-            margin-top: 2.2em;
+        & h1 {
+            @include head(1.1rem, 1.55, $text-color);
+            margin-bottom: 1.6em;
         }
+        & p {
+            @include body(0.9rem, 400, 1.75, uppercase, $text-color);
+        }
+    }
+}
+
+// .advertising__point-interest
+// -------------------------------------------------------------
+.advertising {
+    &__point-interest {
+        @include white-color-blue-bg($text-color-white);
+        &--text {
+            @include pad(4.9em 2em 3.5em 2em);
+            & h1 {
+                @include head(1.1rem, 1.55, $text-color-white);
+                @include margin (0.4em 0 0.3em 0);
+            }
+            & p {
+                @include body(0.9rem, 400, 1.75, uppercase, $text-color-white);
+            }
+        }
+        &--text1 {
+            @include pad(3em 2em 3.5em 2em);
+            & h1 {
+                @include head(1.1rem, 1.55, $text-color-white);
+                @include margin (0.4em 0 0.3em 0);
+            }
+            & p {
+                @include body(0.9rem, 400, 1.75, uppercase, $text-color-white);
+            }
+        }
+    }
+    &__picture-village {
+        height: 260px;
+        background: url("../img/sedona-village.jpg") 0 0 no-repeat;
+        background-size: cover;
+    }
+    &__picture-bridge {
+        height: 260px;
+        background: url("../img/diabolo-bridge.jpg") 0 0 no-repeat;
+        background-size: cover;
     }
     &__reasons-to-travel {
         margin-bottom: .9em;
     }
-    &__point-interest {
-        @include white-color-blue-bg( $white);
-        &--text {
-            @include pad(4.9em 3.2em 3.8em 3.2em);
-            text-align: center;
-            h1 {
-                margin-bottom: .5em;
-                color: $white;
-            }
-            p {
-                color: $white;
-            }
+}
+
+// .advertising__recommendation 
+// -------------------------------------------------------------
+.advertising {
+    &__recommendation {
+        @include pad(1.7em 0 0 0);
+        & h1 {
+            @include head(1.1rem, 1.55, $text-color);
+            @include margin(0 0 0.45em);
+            text-align: left;
+        }
+        & p {
+            @include body(0.9rem, 400, 1.7, uppercase, $text-color);
+            @include margin(0 0 0.4em);
+            text-align: left;
         }
     }
     &__dwell {
         position: relative;
-        @include pad(2.6em 3.2em 0 8em);
+        @include pad(2em 0 0 7em);
         &:before {
             position: absolute;
-            top: 2.2em;
-            left: 3em;
+            top: 7px;
+            left: 20px;
             width: 38px;
             height: 38px;
             content: '';
@@ -177,11 +100,11 @@
     }
     &__gift {
         position: relative;
-        @include pad(2em 3.2em 0 8em);
+        @include pad(2em 0 0 7em);
         &:before {
             position: absolute;
-            top: 2.2em;
-            left: 3em;
+            top: 7px;
+            left: 20px;
             width: 38px;
             height: 38px;
             content: '';
@@ -190,30 +113,34 @@
     }
     &__hamburger {
         position: relative;
-        @include pad(2em 3.1em 4em 8em);
+        @include pad(2em 0 3.7em 7em);
         &:before {
             position: absolute;
-            top: 2.2em;
-            left: 3em;
+            top: 7px;
+            left: 20px;
             width: 38px;
             height: 38px;
             content: '';
             background: url("../img/icons-big-mag.svg") 0 0 no-repeat;
         }
     }
-    &__interes {
-        font-size: 1.15rem;
-        font-weight: 700;
-        margin-bottom: 1.4em;
-        text-transform: uppercase;
-    }
-    &__hotel-booking--text {
-        @include pad(3.1em 0 5em 0);
-        p {
-            margin-bottom: 2.5em;
+}
+
+// .advertising__preference
+// -------------------------------------------------------------
+.advertising {
+    &__preference {
+        text-align: center;
+        background: $gray;
+        &--text {
+            @include pad(1.6em 0 3em 0);
+            // padding-top: 1.6em;
+            // padding-bottom: 3em;
+            text-align: center;
         }
     }
     &__preference--text {
+        @include pad(1.9em 2.5em 2.5em 3em);
         position: relative;
         &:before {
             position: absolute;
@@ -224,27 +151,48 @@
             content: '';
             background: $gray-third;
         }
-    }
-    &__preference {
-        text-align: center;
-        background: $gray;
-        &--text {
-            padding-top: 1.6em;
-            padding-bottom: 3em;
-            text-align: center;
-            h1 {
-                margin-bottom: .5em;
-            }
+        & h1 {
+            @include head(1.1rem, 1.55, $text-color);
+            margin-bottom: 0.3em;
+            margin-top: 0.3em;
+        }
+        & p {
+            @include body(0.9rem, 400, 1.75, uppercase, $text-color);
         }
     }
+}
+
+// .advertising__hotel-booking
+// -------------------------------------------------------------
+.advertising {
     &__hotel-booking {
+        @include pad(2.6em 2.5em 4.9em 2.5em);
         position: relative;
         text-align: center;
         input[type='submit'] {
             display: inline-block;
         }
-        &__interes {
-            // font-size: 2.1rem;
+        & p {
+            @include body(0.9rem, 400, 1.75, uppercase, $text-color);
+        }
+        &--text {
+            @include pad(0 0 3.3em 0);
+        }
+    }
+    &__interes {
+        @include head(1.1rem, 1.55, $text-color);
+        margin-bottom: 1.2em;
+    }
+}
+
+// .media
+// -------------------------------------------------------------
+// 
+main {
+    @media screen and (min-width: 320px) {
+        .page-main__wrapper {
+            max-width: $screen_min;
+            margin: 0 auto;
         }
     }
 }

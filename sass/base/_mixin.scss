@@ -1,5 +1,23 @@
 // /* mixin
 //    ========================================================================== */
+@mixin body($base-font-size, $font-weight, $base-line-height, $text-transform, $text-color) {
+    font-size: $base-font-size;
+    font-weight: $font-weight;
+    line-height: $base-line-height;
+    text-align: center;
+    text-transform: $text-transform;
+    color: $text-color;
+}
+
+@mixin head($base-font-size, $base-line-height, $text-color) {
+    font-size: $base-font-size;
+    font-weight: 700;
+    line-height: $base-line-height;
+    text-align: center;
+    text-transform: uppercase;
+    color: $text-color;
+}
+
 @mixin box-sizing( $type: border-box) {
     -webkit-box-sizing: $type;
     -moz-box-sizing: $type;
@@ -16,12 +34,6 @@
     margin: $pads;
 }
 
-@mixin heading ($font-size-p, $line-height, $margin-bottom) {
-    font-size: $font-size-p;
-    line-height: $line-height;
-    margin-bottom: $margin-bottom;
-}
-
 @mixin white-color-blue-bg ($a) {
     color: $a;
     @if lightness($a) >=50% {
@@ -32,8 +44,6 @@
     }
 }
 
-// {@include white-color-blue-bg( $text-color )}
-// {@include white-color-blue-bg( $white )}
 @mixin gray-line ($width) {
     &:before {
         position: absolute;
@@ -43,19 +53,6 @@
         height: 2px;
         content: '';
         background: $gray-line;
-    }
-}
-
-@mixin intro {
-    position: relative;
-    padding-bottom: 30px;
-    text-align: center;
-    &--text p {
-        line-height: 1.6em;
-    }
-    &--text h1 {
-        font-size: 1.63rem;
-        margin-bottom: .9em;
     }
 }
 
@@ -91,7 +88,6 @@
     }
 }
 
-// {@include clearfix}
 @mixin container {
     margin: auto;
     @madia (min-width: $screen-md) {
@@ -105,28 +101,8 @@
     }
 }
 
-@mixin digital {
-    &--digital {
-        float: left;
-        width: 61px;
-        height: 60px;
-        margin-right: 6px;
-        text-align: center;
-        background: $gray-second;
-        &:last-child {
-            float: right;
-            margin-right: 0;
-        }
-    }
-    &--digital-big {
-        float: left;
-        width: 50%;
-    }
-}
-
-@mixin link ($link, $hover, $active) {
+@mixin hover-active ($hover, $hover-bg, $active, $active-bg) {
     a {
-        color: $link;
         &:hover {
             color: $hover;
         }
@@ -135,16 +111,3 @@
         }
     }
 }
-
-@mixin gray-btn ($link, $hover, $active) {
-    a {
-        color: $link;
-        &:hover {
-            color: $hover;
-        }
-        &:active {
-            color: $active;
-        }
-    }
-}
-
