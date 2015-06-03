@@ -26,6 +26,13 @@
     box-sizing: $type;
 }
 
+// @mixin centerer {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
 @mixin pad ($pads...) {
     padding: $pads;
 }
@@ -87,6 +94,7 @@
         *zoom: 1;
     }
 }
+
 
 @mixin container {
     margin: auto;

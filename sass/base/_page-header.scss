@@ -1,68 +1,83 @@
 /* page-header
    ========================================================================== */
 
-.page-nav {
+.page-header__nav {
     position: relative;
     z-index: 50;
     top: 0;
     left: 0;
     width: 100%;
     background: $blue;
-    &__list {
-        display: none;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        text-align: center;
+}
+
+.page-header__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.page-header__list a {
+    border-top: 1px solid $blue-light;
+    border-bottom: 1px solid $blue-dark;
+}
+
+.page-header__item {
+    font-size: 1.12rem;
+    font-weight: bold;
+    line-height: 3;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    background: $blue;
+    &:hover {
+        color: $text-color-white;
+        background: $blue-hover;
     }
-    &__list a {
-        border-top: 1px solid $blue-light;
-        border-bottom: 1px solid $blue-dark;
+    &:active {
+        color: $text-color-white;
+        background: $blue-down;
     }
-    & a {
-        font-size: 1.12rem;
-        font-weight: bold;
-        line-height: 3;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $white;
-        background: $blue;
-        &:hover {
-            color: $text-color-white;
-            background: $blue-hover;
-        }
-        &:active {
-            color: $text-color-white;
-            background: $blue-down;
-        }
+}
+
+.page-header__toggle {
+    font-size: 1.12rem;
+    font-weight: bold;
+    line-height: 3;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    &:before {
+        font-family: FontAwesome;
+        font-size: 1rem;
+        content: '\f0c9';
+        color: $blue;
     }
-    &__toggle {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        &:before {
-            font-family: FontAwesome;
-            font-size: 1rem;
-            content: '\f0c9';
-            color: $blue;
-        }
-        &:after {
-            font-family: FontAwesome;
-            content: '\f00d';
-        }
+    &:after {
+        font-family: FontAwesome;
+        content: '\f00d';
+        color: $text-color-white;
     }
-    &:hover a.page-nav__toggle {
-        &:before {
-            font-family: FontAwesome;
-            content: '\f0c9';
-            color: transparent;
-        }
+}
+
+&:hover a.page-header__toggle {
+    &:before {
+        font-family: FontAwesome;
+        content: '\f0c9';
     }
-    a.page-nav__toggle {
-        background: transparent;
-    }
+}
+
+a.page-header__toggle {
+    background: transparent;
+}
+
+.page-header__logo a {
+    background: transparent;
 }
 
 // -----------------------------------------------------------------------
@@ -71,7 +86,7 @@
         width: 320px;
         margin: 0 auto;
     }
-    &__banner.index {
+    &__banner--index {
         position: relative;
         overflow: hidden;
         height: 390px;
@@ -90,7 +105,7 @@
             bottom: -1px;
             width: 768px;
             height: 37px;
-            left: calc((50% - 385px);
+            left: calc(50% - 385px);
             content: '';
             background: url('../img/mask.png') 0 0 no-repeat;
             background-size: cover;
@@ -100,9 +115,9 @@
             height: auto;
         }
     }
-    &__banner.post,
-    &__banner.blog,
-    &__banner.form {
+    &__banner--post,
+    &__banner--blog,
+    &__banner--form {
         position: relative;
         overflow: hidden;
         height: 158px;
@@ -110,8 +125,9 @@
             position: absolute;
             z-index: 50;
             top: 42px;
-            left: 65px;
-            width: 320px;
+            // left: 65px;
+            left: calc(50% - 93px);
+            width: 186px;
             height: 313px;
             content: '';
             background: url('../img/sedona-lettering.png') 0 0 no-repeat;
@@ -120,9 +136,8 @@
             position: absolute;
             z-index: 50;
             bottom: -1px;
-            width: 768px;
+            width: 100%;
             height: 37px;
-            left: calc((50% - 385px);
             content: '';
             background: url('../img/mask.png') 0 0 no-repeat;
             background-size: cover;
@@ -166,4 +181,30 @@
         height: 60px;
         background: $white;
     }
+}
+
+// .media
+// -------------------------------------------------------------
+// 
+@media(max-width: 1200px) {}
+
+@media(max-width: 960px) {
+    /* Стили для планшета в горизонтальном положении */
+}
+
+@media(max-width: 768px) {
+    /* Стили для планшета в вертикальном положении */
+}
+
+@media(max-width: 480px) {
+    /* Стили для телефона */
+}
+
+main {
+    // @media screen and (min-width: 320px) {
+    //     .page-main__wrapper {
+    // max-width: $screen_min;
+    // margin: 0 auto;
+    //     }
+    // }
 }

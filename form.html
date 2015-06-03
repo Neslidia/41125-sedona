@@ -5,6 +5,7 @@
     <title>Sedona-mobile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   -->
@@ -12,35 +13,29 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="page-header__wrapper">
-            <nav class="page-nav">
-                <ul class="page-nav__list">
-                    <li>
-                        <a href="#">Карта штата</a>
-                    </li>
-                    <li>
-                        <a href="#">Информация</a>
-                    </li>
-                    <li>
-                        <a href="#">Фото и видео</a>
-                    </li>
-                    <li>
-                        <a href="#">Гостиницы</a>
-                    </li>
-                </ul>
-                <a href="#" class="page-nav__toggle"></a>
-            </nav>
-            <div class="page-header__logo">
-                <a href="#">
-                    <img src="img/sedona-logo.png" alt="City of Sedona"></a>
-            </div>
-            <div class="page-header__banner form">
+<header class="page-header">
+    <div class="page-header__wrapper">
+        <nav class="page-header__nav">
+            <ul class="page-header__list">
+                <li><a class="page-header__item" href="#">Карта штата</a></li>
+                <li><a class="page-header__item" href="#">Информация</a></li>
+                <li><a class="page-header__item" href="#">Фото и видео</a></li>
+                <li><a class="page-header__item" href="#">Гостиницы</a></li>
+            </ul>
+            <a href="#" class="page-header__toggle"></a>
+        </nav>
+        <div class="page-header__logo">
+            <a href="#">
+                <img src="img/sedona-logo.png" alt="City of Sedona">
+            </a>
+        </div>
+            <div class="page-header__banner page-header__banner--form">
                 <div class="page-header__banner-picture">
                     <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona"></div>
             </div>
         </div>
     </header>
+
     <main class="page-main">
         <div class="page-main__wrapper">
             <div class="review">
@@ -262,27 +257,17 @@
             </div>
         </div>
     </main>
-    <footer class="page-footer">
+
+
+    <footer class="page-footer row">
         <div class="page-footer__wrapper">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
-            <div class="social-links">
-                <a href="#" class="social-links__twitter">
-                    <i class="fa fa-twitter fa-2x"></i>
-                    <span>&nbsp; twitter</span>
-                </a>
-                <a href="#" class="social-links__facebook">
-                    <i class="fa fa-facebook fa-2x"></i>
-                    <span>&nbsp; facebook</span>
-                </a>
-                <a href="#" class="social-links__youtube">
-                    <i class="fa fa-youtube-play fa-2x"></i>
-                    <span>&nbsp; youtube</span>
-                </a>
+            <div class="page-footer__social">
+                <a href="#" class="page-footer__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
+                <a href="#" class="page-footer__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
+                <a href="#" class="page-footer__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
             </div>
-            <a class="page-footer__made-by" href="#">
-    Разработано
-    <div class="sprite client"></div>
-  </a>
+            <a class="page-footer__made-by" href="#">Разработано<i class="sprite client"></i></a>
         </div>
     </footer>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

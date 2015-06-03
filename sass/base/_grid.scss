@@ -1,16 +1,88 @@
 /* grid
    ========================================================================== */
 
-// $n: 12;
-// @for $i from 1 through 12{
-//     .col-# {
-//         $i
-//     }
-//     {
-//         width: ($i * 89% / $n);
-//         margin-right: 1%;
-//     }
+
+$n: 12;
+@for $i from 1 through 12 {
+    .col-#{$i}-of-12 {
+        width: ($i * 100% / $n);
+    }
+}
+
+    .col {
+        display: block;
+        float: left;
+        margin: 1% 0 1% 0%;
+        background: #f7f7f7;
+    }
+
+    .row {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+    @include clearfix;
+}
+
+// .media
+// -------------------------------------------------------------
+// 
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 960px) {
+/* Стили для планшета в горизонтальном положении */
+}
+@media only screen and (max-width: 768px) {
+/* Стили для планшета в вертикальном положении */
+}
+@media only screen and (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0;
+    }
+    .col-1-of-12,
+    .col-2-of-12,
+    .col-3-of-12,
+    .col-4-of-12,
+    .col-5-of-12,
+    .col-6-of-12,
+    .col-7-of-12,
+    .col-8-of-12,
+    .col-9-of-12,
+    .col-10-of-12,
+    .col-11-of-12,
+    .col-12-of-12 {
+        width: 100%;
+    }
+}
+
+
+// @media(max-width: 1200px) {
+
 // }
-// .col-12 {
-//     margin-right: 0;
+
+// @media(max-width: 960px) {
+// /* Стили для планшета в горизонтальном положении */
 // }
+// @media(max-width: 768px) {
+// /* Стили для планшета в вертикальном положении */
+// }
+// @media(max-width: 480px) {
+// /* Стили для телефона */
+// }
+
+
+main {
+    // @media screen and (min-width: 320px) {
+    //     .page-main__wrapper {
+            // max-width: $screen_min;
+            // margin: 0 auto;
+    //     }
+    // }
+}
+
+
+
+
+

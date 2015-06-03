@@ -4,16 +4,18 @@
 // .post__intro 
 // -------------------------------------------------------------
 .post {
+         @include when-happen;
+     @include what-happen;
     &__intro {
         position: relative;
         @include pad(22px 15px 13px);
-        @include when-happen;
-        @include what-happen;
+
         & p {
             @include body(1.1rem, 400, 1.36, none, $text-color);
             @include margin(0 0 17px);
         }
         &--text {
+            text-align: center;
             @include margin(0 0 20px);
         }
         .marginalii {
@@ -146,10 +148,10 @@
 // -------------------------------------------------------------
 // 
 main {
-    @media screen and (min-width: 320px) {
-        .page-main__wrapper {
-            max-width: $screen_min;
-            margin: 0 auto;
-        }
-    }
+    // @media screen and (min-width: 320px) {
+    //     .page-main__wrapper {
+    // max-width: $screen_min;
+    // margin: 0 auto;
+    //     }
+    // }
 }

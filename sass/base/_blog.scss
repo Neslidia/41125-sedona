@@ -1,139 +1,139 @@
-/* blog
+ /* blog
    ========================================================================== */
-
-@mixin when-happen {
-    &__when-happen {
-        font-size: .7rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: inline-block;
-        text-transform: uppercase;
-        color: $second-text-gray;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-image: url("../img/spritesheet-last.png");
-            background-position: -289px -75px;
-            top: -23px;
-            left: -50px;
-        }
-    }
-}
-
-@mixin what-happen {
-    &__what-happen {
-        font-size: .7rem;
-        position: absolute;
-        left: 137px;
-        bottom: 0;
-        text-transform: uppercase;
-        color: $second-text-gray;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-image: url("../img/spritesheet-last.png");
-            background-position: -289px -5px;
-            top: -23px;
-            left: -50px;
-        }
-    }
-}
-
-// .post__intro 
-// -------------------------------------------------------------
-.blog__intro {
-    position: relative;
-    @include gray-line(84%);
-    @include pad(22px 15px 13px);
-    @include when-happen;
-    @include what-happen;
-    &--text {
-        text-align: center;
-        @include margin(0 0 20px);
-    }
-    &--text h1 {
-        @include head(1.83rem, 1.55, $text-color);
-    }
-    & p {
-        @include body(0.9rem, 400, 1.7, uppercase, $text-color);
-        @include margin(0 0 17px);
-    }
-}
-
-// .blog-item 
-// -------------------------------------------------------------
-.blog-item {
-    position: relative;
-    @include gray-line(84%);
-    @include pad(38px 20px 37px);
-    @include when-happen;
-    @include what-happen;
-    &__text {
-        text-align: center;
-        @include margin(0 0 20px);
-    }
-    & h3 {
-        @include head(1.3rem, 1.2, $text-color);
-        margin-bottom: 1.1em;
-    }
-    &__text p {
-        @include body(0.9rem, 400, 1.45, uppercase, $text-color);
-    }
-    footer {
-        @include margin(0 0 30px 0);
-    }
-}
-
-.blog-item--pagination {
-    position: relative;
-    @include gray-line(84%);
-    @include pad(45px 20px 26px);
-    &-item {
-        display: inline-block;
-        margin-right: 14px;
-        &:nth-child(4) {
-            margin-right: 0;
-        }
-    }
-    &-item a {
-        @include pagination;
-        &:hover {
-            color: $text-color-white;
-            background: $blue-hover;
-        }
-        &:active {
-            color: $text-color-white;
-            background: $blue-down;
-        }
-    }
-    & a.blog-item--pagination-active {
-        color: $headings-color;
-        background: $gray-hover-disabled;
-    }
-}
-
-.blog {
-    .marginalii {
-        position: relative;
-        width: 80%;
-        margin: auto;
-        @include pad(20px 0 0);
-    }
-}
-
-// .media
-// -------------------------------------------------------------
-// 
-main {
-    @media screen and (min-width: 320px) {
-        .page-main__wrapper {
-            max-width: $screen_min;
-            margin: 0 auto;
-        }
-    }
-}
+ 
+ @mixin when-happen {
+     &__when-happen {
+         font-size: .7rem;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         display: inline-block;
+         text-transform: uppercase;
+         color: $second-text-gray;
+         &:before {
+             content: "";
+             position: absolute;
+             width: 60px;
+             height: 60px;
+             background-image: url("../img/spritesheet-last.png");
+             background-position: -289px -75px;
+             top: -23px;
+             left: -50px;
+         }
+     }
+ }
+ 
+ @mixin what-happen {
+     &__what-happen {
+         font-size: .7rem;
+         position: absolute;
+         left: 137px;
+         bottom: 0;
+         text-transform: uppercase;
+         color: $second-text-gray;
+         &:before {
+             content: "";
+             position: absolute;
+             width: 60px;
+             height: 60px;
+             background-image: url("../img/spritesheet-last.png");
+             background-position: -289px -5px;
+             top: -23px;
+             left: -50px;
+         }
+     }
+ }
+ 
+ // .blog__intro 
+ // -------------------------------------------------------------
+ .blog__intro {
+     position: relative;
+     @include gray-line(84%);
+     @include pad(22px 15px 13px);
+     &--text {
+         text-align: center;
+         @include margin(0 0 20px);
+     }
+     &--text h1 {
+         @include head(1.83rem, 1.55, $text-color);
+     }
+     & p {
+         @include body(0.9rem, 400, 1.7, uppercase, $text-color);
+         @include margin(0 0 17px);
+     }
+ }
+ 
+ // .blog-item 
+ // -------------------------------------------------------------
+ .blog {
+     @include when-happen;
+     @include what-happen;
+     &__item {
+         position: relative;
+         @include gray-line(84%);
+         @include pad(38px 20px 37px);
+     }
+     &__text {
+         text-align: center;
+         @include margin(0 0 20px);
+     }
+     & h3 {
+         @include head(1.3rem, 1.2, $text-color);
+         margin-bottom: 1.1em;
+     }
+     &__text p {
+         @include body(0.9rem, 400, 1.45, uppercase, $text-color);
+     }
+     footer {
+         @include margin(0 0 30px 0);
+     }
+ }
+ 
+ .blog__item--pagination {
+     position: relative;
+     @include gray-line(84%);
+     @include pad(45px 20px 26px);
+     &-item {
+         display: inline-block;
+         margin-right: 14px;
+         &:nth-child(4) {
+             margin-right: 0;
+         }
+     }
+     &-item a {
+         @include pagination;
+         &:hover {
+             color: $text-color-white;
+             background: $blue-hover;
+         }
+         &:active {
+             color: $text-color-white;
+             background: $blue-down;
+         }
+     }
+     & a.blog-item--pagination-active {
+         color: $headings-color;
+         background: $gray-hover-disabled;
+     }
+ }
+ 
+ .blog {
+     .marginalii {
+         position: relative;
+         width: 80%;
+         margin: auto;
+         @include pad(20px 0 0);
+     }
+ }
+ 
+ // .media
+ // -------------------------------------------------------------
+ // 
+ main {
+     @media screen and (min-width: 320px) {
+         .page-main__wrapper {
+     max-width: $screen_min;
+     margin: 0 auto;
+         }
+     }
+ }

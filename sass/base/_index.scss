@@ -13,7 +13,7 @@
             bottom: -18px;
             width: 768px;
             height: 37px;
-            left: calc((50% - 385px);
+            left: calc(50% - 385px);
             content: '';
             background: url("../img/mask-small.png") 0 0 no-repeat;
             background-size: cover;
@@ -178,6 +178,12 @@
         &--text {
             @include pad(0 0 3.3em 0);
         }
+        & button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            // @include centerer;
+        }
     }
     &__interes {
         @include head(1.1rem, 1.55, $text-color);
@@ -189,10 +195,15 @@
 // -------------------------------------------------------------
 // 
 main {
-    @media screen and (min-width: 320px) {
-        .page-main__wrapper {
-            max-width: $screen_min;
-            margin: 0 auto;
-        }
-    }
+    // @media screen and (min-width: 320px) {
+    //     .page-main__wrapper {
+    // max-width: $screen_min;
+    // margin: 0 auto;
+    //     }
+    // }
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
 }

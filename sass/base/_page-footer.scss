@@ -8,7 +8,6 @@
 
 .page-footer {
     text-align: center;
-    pagging-top: 40px;
     &__visitsedona {
         font-size: 1.6rem;
         line-height: 100px;
@@ -41,7 +40,8 @@
 
 }
 
-.social-links {
+.page-footer__social {
+    line-height: 100px;
     a {
         line-height: 42px;
         display: inline-block;
