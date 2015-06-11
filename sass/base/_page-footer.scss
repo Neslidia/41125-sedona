@@ -1,35 +1,29 @@
 /* page-footer
    ========================================================================== */
 
-.page-footer__wrapper {
-    width: 320px;
-     margin: 0 auto;
-}
 
 .page-footer {
     text-align: center;
-    pagging-top: 40px;
     &__visitsedona {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         line-height: 100px;
         display: block;
         vertical-align: middle;
         color: $black;
+        font-weight: 700;
+        text-transform: uppercase;
     }
     &__made-by {
         font-size: .8rem;
         line-height: 100px;
+        position: relative;
         display: inline-block;
         width: 200px;
         margin: auto;
-        padding-right: 30px;
         vertical-align: middle;
         text-transform: uppercase;
         color: $black;
-    }
-    &__made-by {
-        position: relative;
-        .sprite.client {
+                .sprite.client {
             position: absolute;
             top: 20px;
             right: 18px;
@@ -38,10 +32,10 @@
             content: '';
         }
     }
-
 }
 
-.social-links {
+.page-footer__social {
+    line-height: 100px;
     a {
         line-height: 42px;
         display: inline-block;
@@ -59,3 +53,50 @@
     }
 
 }
+
+
+/*media queries*/
+
+/* Desktop ----------- */
+@media screen and (max-width: 1600px) {
+     .page-footer {
+         &__made-by {
+             padding-right: 0;
+             .sprite.client {
+                 right: 5px;
+             }
+         }
+     }    
+}
+
+/* Tablet ----------- */
+@media screen and (max-width: 1024px) {
+     .page-footer {
+         &__made-by {
+             text-align: right;
+               padding-right: 74px;
+             .sprite.client {
+                 right: 18px;
+             }
+         }
+     }  
+}
+
+/* Small ----------- */
+@media screen and (max-width : 480px) {
+     .page-footer {
+         &__made-by {
+             text-align: right;
+               padding-right: 74px;
+             .sprite.client {
+                 right: 18px;
+             }
+         }
+     }
+}
+
+
+
+
+
+

@@ -5,6 +5,7 @@
     <title>Sedona-mobile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -13,128 +14,170 @@
 <body>
     <header class="page-header">
         <div class="page-header__wrapper">
-            <nav class="page-nav">
-                <ul class="page-nav__list">
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Гостиницы</a></li>
+            <nav class="page-header__nav">
+                <ul class="page-header__list">
+                    <li><a class="page-header__item" href="#">Карта штата</a></li>
+                    <li><a class="page-header__item" href="#">Информация</a></li>
+                    <li><a class="page-header__item" href="#">Фото и видео</a></li>
+                    <li><a class="page-header__item" href="#">Гостиницы</a></li>
                 </ul>
-                <a href="#" class="page-nav__toggle"></a>
+                <a href="#" class="page-header__toggle"></a>
             </nav>
             <div class="page-header__logo">
                 <a href="#">
                     <img src="img/sedona-logo.png" alt="City of Sedona">
                 </a>
             </div>
-            <div class="page-header__banner form">
-                <div class="page-header__banner-picture">
-                    <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
-                </div>
+            <div class="page-header__banner page-header__banner--form">
+                <!-- <div class="page-header__banner-picture"> -->
+                <img class="page-header__banner-picture" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
+                <!-- </div> -->
             </div>
         </div>
     </header>
     <main class="page-main">
         <div class="page-main__wrapper">
             <div class="blog">
-                <header class="blog__intro">
-                    <div class="blog__intro--text">
-                        <h1>Блог шерифа</h1>
-                        <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+                <header class="blog__intro row">
+                    <div class="col col-xs-12 col-md-12, col-lg-12">
+                        <div class="blog__intro--text">
+                            <h1>Блог шерифа</h1>
+                            <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+                        </div>
                     </div>
                 </header>
-                <article class="blog-item">
-                    <div class="blog-item__text">
-                        <h3>Внимание! сбежала моя домашняя анаконда</h3>
-                        <p>Жители Седоны и гости города,
-                            <br> будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее
-                            <br> подальше.</p>
-                    </div>
-                    <div class="marginalii">
-                        <a class="blog-item__when-happen" href="#">Позавчера</a>
-                        <a class="blog-item__what-happen" href="#">Происшествия</a>
-                    </div>
-                </article>
-                <article class="blog-item">
-                    <div class="blog-item__text">
-                        <h3 class="blog-item__text-normal">Принят антитабачный закон штата</h3>
-                        <p>Уважаемые туристы, пожалуйста не забывайте, что курение сигарет и сигар в общественных местах города Седона категорически запрещено.</p>
-                    </div>
-                    <div class="marginalii">
-                        <a class="blog-item__when-happen" href="#">2 дня назад</a>
-                        <a class="blog-item__what-happen" href="#">Законы</a>
-                    </div>
-                </article>
-                <article class="blog-item">
-                    <div class="blog-item__text">
-                        <h3 class="blog-item__text-normal">Маньяк задержан, дает показания</h3>
-                        <p>Жители седоны могут спать
-                            <br> спокойно. Задержан маньяк-эксгибиционист, державший
-                            <br>в страхе весь город.
-                            <br>Пострадавшим обращаться в 911.</p>
-                    </div>
-                    <div class="marginalii">
-                        <a class="blog-item__when-happen" href="#">3 дня назад</a>
-                        <a class="blog-item__what-happen" href="#">Происшествия</a>
-                    </div>
-                </article>
-                <article class="blog-item">
-                    <div class="blog-item__text">
-                        <h3 class="blog-item__text-normal">Водопад закрыт на реконструкцию</h3>
-                        <p>Всем, кто планировал посещать водопад на этих выходных придется изменить планы, на нем ведутся ремонтные работы по улучшению подачи воды.</p>
-                    </div>
-                    <div class="marginalii">
-                        <a class="blog-item__when-happen" href="#">Неделю назад</a>
-                        <a class="blog-item__what-happen" href="#">Интересное</a>
-                    </div>
-                </article>
-                <article class="blog-item">
-                    <div class="blog-item__text">
-                        <h3 class="blog-item__text-normal">Отрылся новый стейкхаус «горный бык»</h3>
-                        <p>Лучшие стейки в Аризоне!
-                            <br> Приемлемые цены и только самые лучшие продукты. Заходите попробовать! Действует акция: съешь два и получи третий!</p>
-                    </div>
-                    <div class="marginalii">
-                        <a class="blog-item__when-happen" href="#">Месяц назад</a>
-                        <a class="blog-item__what-happen" href="#">Еда</a>
-                    </div>
-                </article>
-                <article class="blog-item">
-                    <div class="blog-item__text">
-                        <h3 class="blog-item__text-normal">Прогноз погоды на ближайшие выходные</h3>
-                        <p>Синоптики обещают, что будет ясно, безветрено и около 90 по фаренгейту. Как в пустыне! Проверим их слова уже через пару дней.!</p>
-                    </div>
-                    <div class="marginalii">
-                        <a class="blog-item__when-happen" href="#">Год назад</a>
-                        <a class="blog-item__what-happen" href="#">Погода</a>
-                    </div>
-                </article>
-                <footer class="blog-item--pagination">
-                    <ul>
-                        <li class="blog-item--pagination-item"><a class=" blog-item--pagination-active" href="#">1</a></li>
-                        <li class="blog-item--pagination-item"><a class="" href="#">2</a>
-                        </li>
-                        <li class="blog-item--pagination-item"><a class="" href="#">3</a>
-                        </li>
-                        <li class="blog-item--pagination-item"><a class="" href="#">4</a>
-                        </li>
-                        <li class="blog-item--pagination-item"><a class="" href="#">5</a>
-                        </li>
-                    </ul>
-                </footer>
+                <div class="row">
+                    <!-- <div class="col col-xs-12 col-md-6 col-lg-4"> -->
+                    <article class="blog__item col col-xs-12 col-md-6 col-lg-4">
+                        <div class="blog__text">
+                            <h3>Внимание! сбежала моя<br>домашняя анаконда</h3>
+                            <p>Жители Седоны и гости города, будьте
+                                <br>бдительны — Сбежала моя домашняя
+                                <br>змея. Увидевшему срочно звонить 911 и
+                                <br>бежать от нее подальше.
+                            </p>
+                        </div>
+                        <div class="marginalii">
+                            <a class="blog__when-happen" href="#">Позавчера</a>
+                            <a class="blog__what-happen" href="#">Происшествия</a>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                    <!-- <div class="col col-xs-12 col-md-6 col-lg-4"> -->
+                    <article class="blog__item col col-xs-12 col-md-6 col-lg-4">
+                        <div class="blog__text">
+                            <h3 class="blog__text-normal">Принят антитабачный<br>закон штата</h3>
+                            <p>Уважаемые туристы, пожалуйста не
+                                <br>забывайте, что курение сигарет и сигар в
+                                <br>общественных местах города Седона
+                                <br>категорически запрещено.</p>
+                        </div>
+                        <div class="marginalii">
+                            <a class="blog__when-happen" href="#">2 дня назад</a>
+                            <a class="blog__what-happen" href="#">Законы</a>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                    <!-- <div class="col col-xs-12 col-md-6 col-lg-4"> -->
+                    <article class="blog__item col col-xs-12 col-md-6 col-lg-4">
+                        <div class="blog__text">
+                            <h3 class="blog__text-normal">Маньяк задержан, дает<br>показания</h3>
+                            <p>Жители седоны могут спать спокойно.
+                                <br>Задержан маньяк-эксгибиционист,
+                                <br>державший в страхе весь город.
+                                <br>Пострадавшим обращаться в 911.</p>
+                        </div>
+                        <div class="marginalii">
+                            <a class="blog__when-happen" href="#">3 дня назад</a>
+                            <a class="blog__what-happen" href="#">Происшествия</a>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                    <!-- <div class="col col-xs-12 col-md-6 col-lg-4"> -->
+                    <article class="blog__item col col-xs-12 col-md-6 col-lg-4">
+                        <div class="blog__text">
+                            <h3 class="blog__text-normal">Водопад закрыт на<br>реконструкцию</h3>
+                            <p>Всем, кто планировал посещать водопад
+                                <br>на этих выходных придется изменить
+                                <br>планы, на нем ведутся ремонтные работы
+                                <br>по улучшению подачи воды.</p>
+                        </div>
+                        <div class="marginalii">
+                            <a class="blog__when-happen" href="#">Неделю назад</a>
+                            <a class="blog__what-happen" href="#">Интересное</a>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                    <!-- <div class="col col-xs-12 col-md-6 col-lg-4"> -->
+                    <article class="blog__item col col-xs-12 col-md-6 col-lg-4">
+                        <div class="blog__text">
+                            <h3 class="blog__text-normal">Отрылся новый стейкхаус<br>«горный бык»</h3>
+                            <p>Лучшие стейки в Аризоне! Приемлемые
+                                <br>цены и только самые лучшие продукты.
+                                <br>Заходите попробовать! Действует
+                                <br>акция: съешь два и получи третий!</p>
+                        </div>
+                        <div class="marginalii">
+                            <a class="blog__when-happen" href="#">Месяц назад</a>
+                            <a class="blog__what-happen" href="#">Еда</a>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                    <!-- <div class="col col-xs-12 col-md-6 col-lg-4"> -->
+                    <article class="blog__item col col-xs-12 col-md-6 col-lg-4">
+                        <div class="blog__text">
+                            <h3 class="blog__text-normal">Прогноз погоды на<br>ближайшие выходные</h3>
+                            <p>Синоптики обещают, что будет ясно,
+                                <br>безветрено и около 90 по фаренгейту.
+                                <br>Как в пустыне! Проверим их слова уже
+                                <br>через пару дней.!</p>
+                        </div>
+                        <div class="marginalii">
+                            <a class="blog__when-happen" href="#">Год назад</a>
+                            <a class="blog__what-happen" href="#">Погода</a>
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                </div>
+                <div class="row">
+                    <footer class="blog__item--pagination row">
+<!--                         <div class="col col-xs-12 col-md-4 col-lg-4">
+                            <div>Страница</div>
+                        </div> -->
+                        <div class="col col-xs-12 col-md-12 col-lg-12">
+                            <ul>
+                                <li class="blog__item--pagination-item blog__item--pagination-item--active"><a class="" href="#">1</a></li>
+                                <li class="blog__item--pagination-item"><a class="" href="#">2</a>
+                                </li>
+                                <li class="blog__item--pagination-item"><a class="" href="#">3</a>
+                                </li>
+                                <li class="blog__item--pagination-item"><a class="" href="#">4</a>
+                                </li>
+                                <li class="blog__item--pagination-item"><a class="" href="#">5</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
             </div>
         </div>
     </main>
-    <footer class="page-footer">
-        <div class="page-footer__wrapper">
+    <footer class="page-footer row">
+        <!-- <div class="page-footer__wrapper"> -->
+        <div class="col col-lg-4 col-md-4 col-xs-12">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
-            <div class="social-links">
-                <a href="#" class="social-links__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
-                <a href="#" class="social-links__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
-                <a href="#" class="social-links__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
-            </div>
-            <a class="page-footer__made-by" href="#">Разработано<div class="sprite client"></div><!-- <img class="" src="img/icons-client.png"> --></a>
         </div>
+        <div class="col col-lg-4 col-md-4 col-xs-12">
+            <div class="page-footer__social">
+                <a href="#" class="page-footer__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
+                <a href="#" class="page-footer__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
+                <a href="#" class="page-footer__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
+            </div>
+        </div>
+        <div class="col col-lg-4 col-md-4 col-xs-12">
+            <a class="page-footer__made-by" href="#">Разработано<i class="sprite client"></i></a>
+        </div>
+        <!-- </div> -->
     </footer>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/toggle.js"></script>

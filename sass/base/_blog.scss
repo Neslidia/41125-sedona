@@ -1,139 +1,188 @@
-/* blog
+ /* blog
    ========================================================================== */
+ 
+ // .blog__intro 
+ // -------------------------------------------------------------
+ .blog__intro {
+     position: relative;
+     &--text {
+         text-align: center;
+     }
+     &--text h1 {
+         @include head(1.83rem, 1.55, $text-color);
+     }
+     & p {
+         @include body(0.9rem, 400, 1.7, uppercase, $text-color);
+         @include margin(0 0 17px);
+     }
+ }
+ 
+ // .blog-item 
+ // -------------------------------------------------------------
 
-@mixin when-happen {
-    &__when-happen {
-        font-size: .7rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: inline-block;
-        text-transform: uppercase;
-        color: $second-text-gray;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-image: url("../img/spritesheet-last.png");
-            background-position: -289px -75px;
-            top: -23px;
-            left: -50px;
-        }
-    }
-}
+ .blog {
+     @include when-happen;
+     @include what-happen;
+     &__item {
+         position: relative;
+         @include gray-line(74%);
+         @include pad(38px 20px 40px);
+         border-right: 2px solid $gray-line;
+         &--pagination {
+             position: relative;
+             & ul {
+                 width: 352px;
+                 margin: 0 auto;
+             }
+             &-item {
+                 display: inline-block;
+                 margin-right: 14px;
+                 & a {
+                     @include pagination;
+                     &:hover {
+                         color: $text-color-white;
+                         background: $blue-hover;
+                     }
+                     &:active {
+                         color: $text-color-white;
+                         background: $blue-down;
+                     }
+                 }
+                 &:last-child {
+                     margin-right: 0;
+                 }
+             }
+         }
+     }
+     &__text {
+         text-align: center;
+         @include margin(0 0 20px);
+     }
+     & h3 {
+         @include head(1.3rem, 1.2, $text-color);
+         margin-bottom: 1.1em;
+     }
+     &__text p {
+         @include body(0.9rem, 400, 1.45, uppercase, $text-color);
+     }
+     & .marginalii {
+         position: relative;
+         width: 80%;
+         margin: auto;
+         @include pad(20px 0 0);
+     }
+ }
+ .blog__item--pagination-item--active a {
+                     color: $headings-color;
+                     background: $gray-hover-disabled;
+ }
+ 
 
-@mixin what-happen {
-    &__what-happen {
-        font-size: .7rem;
-        position: absolute;
-        left: 137px;
-        bottom: 0;
-        text-transform: uppercase;
-        color: $second-text-gray;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-image: url("../img/spritesheet-last.png");
-            background-position: -289px -5px;
-            top: -23px;
-            left: -50px;
-        }
-    }
-}
-
-// .post__intro 
-// -------------------------------------------------------------
-.blog__intro {
-    position: relative;
-    @include gray-line(84%);
-    @include pad(22px 15px 13px);
-    @include when-happen;
-    @include what-happen;
-    &--text {
-        text-align: center;
-        @include margin(0 0 20px);
-    }
-    &--text h1 {
-        @include head(1.83rem, 1.55, $text-color);
-    }
-    & p {
-        @include body(0.9rem, 400, 1.7, uppercase, $text-color);
-        @include margin(0 0 17px);
-    }
-}
-
-// .blog-item 
-// -------------------------------------------------------------
-.blog-item {
-    position: relative;
-    @include gray-line(84%);
-    @include pad(38px 20px 37px);
-    @include when-happen;
-    @include what-happen;
-    &__text {
-        text-align: center;
-        @include margin(0 0 20px);
-    }
-    & h3 {
-        @include head(1.3rem, 1.2, $text-color);
-        margin-bottom: 1.1em;
-    }
-    &__text p {
-        @include body(0.9rem, 400, 1.45, uppercase, $text-color);
-    }
-    footer {
-        @include margin(0 0 30px 0);
-    }
-}
-
-.blog-item--pagination {
-    position: relative;
-    @include gray-line(84%);
-    @include pad(45px 20px 26px);
-    &-item {
-        display: inline-block;
-        margin-right: 14px;
-        &:nth-child(4) {
-            margin-right: 0;
-        }
-    }
-    &-item a {
-        @include pagination;
-        &:hover {
-            color: $text-color-white;
-            background: $blue-hover;
-        }
-        &:active {
-            color: $text-color-white;
-            background: $blue-down;
-        }
-    }
-    & a.blog-item--pagination-active {
-        color: $headings-color;
-        background: $gray-hover-disabled;
-    }
-}
-
-.blog {
-    .marginalii {
-        position: relative;
-        width: 80%;
-        margin: auto;
-        @include pad(20px 0 0);
-    }
-}
-
-// .media
-// -------------------------------------------------------------
-// 
-main {
-    @media screen and (min-width: 320px) {
-        .page-main__wrapper {
-            max-width: $screen_min;
-            margin: 0 auto;
-        }
-    }
-}
+ // .media
+ // ----------------------------------------------------------------------------------------------------------------------------------
+ // 
+ @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+     .page-main,
+     .page-header,
+     .page-footer {
+         max-width: 1200px;
+         margin: 0 auto;
+     }
+     .blog__item {
+         &:nth-of-type(-n+3) {
+             @include gray-line--up(74%);
+         }
+         &:nth-of-type(3n+3) {
+             border-right: none;
+         }
+     }
+     .blog__intro {
+         @include pad(86px 15px 42px);
+         &--text {
+             @include margin(0 367px 20px);
+         }
+     }
+     .blog__item {
+         &--pagination {
+             line-height: 100px;
+             vertical-align: middle;
+             @include pad(38px 0 5px);
+             &:before {
+                 font-family: $font-family;
+                 position: absolute;
+                 content: "Страница:";
+                 top: 30px;
+                 left: 140px;
+                 font-size: 1.2rem;
+                 text-transform: uppercase;
+                 font-weight: 700;
+             }
+         }
+     }
+ }
+ 
+ @media only screen and (min-width: 481px) and (max-width: 1024px) {
+     .page-main,
+     .page-header,
+     .page-footer {
+         max-width: 768px;
+         margin: 0 auto;
+     }
+     .blog__item {
+         &:nth-of-type(-n+2) {
+             @include gray-line--up(74%);
+         }
+         &:nth-of-type(2n+2) {
+             border-right: none;
+         }
+         &--pagination {
+             &:before {
+                 font-family: $font-family;
+                 position: absolute;
+                 content: "Страница:";
+                 top: 30px;
+                 left: 76px;
+                 font-size: 1.2rem;
+                 text-transform: uppercase;
+                 font-weight: 700;
+             }
+             line-height: 100px;
+             vertical-align: middle;
+             @include pad(38px 0 5px);
+         }
+     }
+     &-item {
+         display: inline-block;
+         margin-right: 14px;
+     }
+ }
+ 
+ @media only screen and (min-width: 320px) and (max-width: 480px) {
+     .page-main,
+     .page-header,
+     .page-footer {
+         max-width: 480px;
+         margin: 0 auto;
+     }
+     .blog__item:nth-of-type(-n+1) {
+         @include gray-line--up(74%);
+     }
+     .blog__item {
+         border-right: none;
+         &--pagination {
+             line-height: 100px;
+             vertical-align: middle;
+             @include pad(38px 0 5px);
+             @include gray-line(74%);
+             &-item {
+                 &:nth-child(4) {
+                     margin-right: 0;
+                 }
+             }
+             & ul {
+                 width: 278px;
+                 margin: 0 auto;
+             }
+         }
+     }
+ }

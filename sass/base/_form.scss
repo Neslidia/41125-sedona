@@ -1,43 +1,7 @@
 /* form
    ========================================================================== */
 
-@mixin input ($width) {
-    font-size: 1.1rem;
-    width: $width;
-    color: $black;
-    border: none;
-    border: 4px solid $gray-second;
-    outline: 0;
-    background-color: $gray-second;
-    &:hover {
-        border: 4px solid $gray-hover-disabled;
-        background: $gray-hover-disabled;
-    }
-    &:active {
-        border: 4px solid $gray-hover-disabled;
-        background: transparent;
-    }
-}
 
-@mixin button($blue) {
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-    outline: none;
-    background-color: $blue;
-    @include pad (17px 39px 17px 39px);
-}
-
-@mixin sprite-after ($height, $width, $left, $top) {
-    position: absolute;
-    content: "";
-    top: $height;
-    right: $width;
-    background: url("../img/spritesheet-last.png") $left $left no-repeat;
-    width: 61px;
-    height: 60px;
-}
 
 // .review__intro 
 // -------------------------------------------------------------
@@ -66,8 +30,7 @@
     @include gray-line(320px);
     @include pad(1.7em 0 1em 0);
     & input {
-        // @include input (297px);
-        @include input (280px);
+        @include input (100%);
     }
     & h2 {
         @include head(1.1rem, 1.55, $text-color);
@@ -90,25 +53,18 @@
         @include head(1.1rem, 1.55, $text-color);
         @include margin(0 0 1.5em);
     }
-    &--inside {
-        @include pad(0 20px);
-    }
+
     & label {
         @include body(1.1rem, 700, 1.36, none, $text-color);
         text-align: left;
     }
     &--radio {
         position: relative;
-        @include margin (36px 0 32px 0px);
+        width: 254px;
+        @include pad (12px 0);
+        @include margin (0 auto);
         div ~ div {
             margin-top: 48px;
-        }
-    }
-    &__fullname ~ label:nth-child(1) {
-        position: relative;
-        &:before {
-            position: absolute;
-            content: "";
         }
     }
     &__fullname ~ label:nth-child(1) {
@@ -132,71 +88,72 @@
             @include head(1.1rem, 1.55, $text-color);
             @include margin(0 0 1.3em);
         }
-        &--inside {
-            @include pad(0 20px);
-        }
     }
-    &__arrival-date input {
-        @include input (280px);
-    }
-    &__arrival-date {
-        display: inline-block;
-        @include margin(0 0 14px 0);
-    }
-    &__duration {
-        position: relative;
-        margin-bottom: 14px;
-        &--digital {
-            display: inline-block;
-            vertical-align: top;
-            width: 61px;
-            height: 60px;
-            @include margin(0 3px 0 0);
-            text-align: center;
-            background: $gray-second;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-        &--input {
-            margin: 0 auto;
-            display: inline-block;
-            width: 145px;
-            height: 60px;
-            @include margin(0 3px 0 0);
-        }
-    }
-    &__departure-date input {
-        @include input (280px);
-    }
-    &__departure-date {
-        @include margin(0 0 14px 0);
-    }
-    &__duration input {
-        @include input (145px);
-    }
+
     & #review__checkout {
         border: 2px solid $gray-forth;
     }
+
+    &__arrival-date input {
+        @include input (100%);
+    }
+
     &__arrival-date {
         position: relative;
         &:after {
-            @include sprite-after(-24px, 118px, -218px, -215px);
+            @include sprite-red-star(-28px, 105px, -218px, -215px);
         }
+    }
+
+
+    &__duration {
+        @include clearfix;
+        position: relative;
+        margin-bottom: 14px;
+        
+        &--input {
+            margin: 0 auto;
+            display: inline-block;
+            width: 100%;
+            height: 60px;
+            @include margin(0 3px 0 0);
+        }   
+    }
+    &__duration input {
+        @include input (50%);
     }
     &__duration {
         position: relative;
         &:after {
-            @include sprite-after(-24px, 18px, -218px, -215px);
+            @include sprite-red-star(-28px, 200px, -218px, -215px);
         }
+    }
+    &__departure-date input {
+        @include input (100%);
     }
     &__departure-date {
         position: relative;
         &:after {
-            @include sprite-after(-24px, 118px, -218px, -215px);
+            @include sprite-red-star(-28px, 105px, -218px, -215px);
         }
     }
 }
+
+        .sprite.minus {
+            margin-right: 5px;
+        }
+        .sprite.minus,
+        .sprite.plus {
+            float: left;
+            display: block;
+            width: 61px;
+        }
+        #review__duration {
+            float: left;
+            display: block;
+            margin-right: 5px;
+            
+        }
 
 // .review__travellers-reckon  
 // ----------------------------------------
@@ -210,20 +167,6 @@
         position: relative;
         @include gray-line(320px);
         @include pad (18px 0 11px 0);
-        &--inside {
-            @include pad(0 20px);
-        }
-    }
-    &__travellers-count {
-        position: relative;
-        @include clearfix;
-    }
-    &__traveller-number {
-        display: inline-block;
-        float: left;
-        width: 61px;
-        margin-right: 6px;
-        text-align: center;
     }
     &__traveller {
         @include clearfix;
@@ -236,8 +179,12 @@
             text-align: center;
         }
     }
-    &__travellers-count input {
-        @include input (145px);
+    &__traveller-number {
+        display: inline-block;
+        float: left;
+        width: 61px;
+        margin-right: 6px;
+        text-align: center;
     }
     &__traveller-number {
         width: 61px;
@@ -246,53 +193,51 @@
             @include input (61px);
         }
     }
-    &__traveller-fullname {
-        display: inline-block;
-        float: right;
-        width: 212px;
-        & input {
-            @include input (212px);
+    &__fullname-surname {
+        position: relative;
+        &:after {
+            @include sprite-red-star(-28px, 70px, -218px, -215px);
         }
+        margin-bottom: 14px;
     }
+    &__fullname-name {
+        position: relative;
+        &:after {
+            @include sprite-red-star(-28px, 33px, -218px, -215px);
+        }
+        margin-bottom: 14px;
+    }
+
     &__travellers-count {
+        position: relative;
+        @include clearfix;
         position: relative;
         margin-bottom: 14px;
         &:after {
-            @include sprite-after(-24px, -16px, -218px, -215px);
+            @include sprite-red-star(-28px, 237px, -218px, -215px);
         }
     }
     &__traveller-surname {
         position: relative;
         margin-bottom: 14px;
         &:after {
-            @include sprite-after(-24px, 88px, -218px, -215px);
+            @include sprite-red-star(-28px, 116px, -218px, -215px);
         }
     }
     &__traveller-name {
         position: relative;
         margin-bottom: 14px;
         &:after {
-            @include sprite-after(-24px, 122px, -218px, -215px);
+            @include sprite-red-star(-28px, 33px, -218px, -215px);
         }
     }
     &__traveller-patronymic {
         margin-bottom: 14px;
-    }
-    &__fullname-surname {
-        position: relative;
-        &:after {
-            @include sprite-after(-24px, 152px, -218px, -215px);
+        & input {
+            @include input (100%);
         }
-        margin-bottom: 14px;
     }
     &__fullname-secondname {
-        margin-bottom: 14px;
-    }
-    &__fullname-name {
-        position: relative;
-        &:after {
-            @include sprite-after(-24px, 189px, -218px, -215px);
-        }
         margin-bottom: 14px;
     }
 }
@@ -363,11 +308,13 @@
         }
         & button:nth-of-type(1) {
             @include head(1.1rem, 1.55, $text-color);
-            @include button($gray-second);
+            @include button($gray-second, 100%);
+            // @include button($gray-second);
         }
         & button:nth-of-type(2) {
             @include head(1.1rem, 1.55, $text-color-white);
-            @include button($blue);
+            @include button($blue, 100%);
+            // @include button($blue);
         }
     }
     &__gallery {
@@ -378,28 +325,34 @@
         font-size: 1rem;
         position: relative;
         display: inline-block;
-        width: 70px;
-        height: 70px;
-        @include margin(0 35px 35px 0);
-        &:nth-child(3n) {
-            margin-right: 0;
-        }
         & .sprite.circle {
             position: absolute;
-            top: -30px;
-            left: 5px;
             width: 60px;
             height: 60px;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
             content: "";
         }
-    }
-    &__gallery--item img {
-        width: 70px;
-        height: auto;
+        & img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
 
 // ---------------------------------------------------------
+
+input {
+    font-size: 1.1rem;
+    width: 100%;
+    color: #000000;
+    border: none;
+    border: 4px solid #f2f2f2;
+    outline: 0;
+    background-color: #f2f2f2;
+}
+
 input[type='text'],
 input[type='password'],
 input[type='date'],
@@ -413,7 +366,7 @@ input[type='url'],
 input[type='checkbox'],
 textarea,
 select {
-    @include pad (15px 20px);
+    @include pad (15px 5%);
 }
 
 input ~ label {
@@ -515,14 +468,126 @@ label {
     color: $text-color;
 }
 
-// .media
-// -------------------------------------------------------------
-// 
-main {
-    @media screen and (min-width: 320px) {
-        .page-main__wrapper {
-            max-width: $screen_min;
-            margin: 0 auto;
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*media queries*/
+
+/* Desktop ----------- */
+@media screen and (max-width: 1600px) {
+
+    .review {
+        &__impression--radio div ~ div {
+            margin-top: 0;
+        }
+        &__photo {
+            @include pad(18px 0 8px 0);
+            & button:nth-of-type(1) {
+                @include button($gray-second, 40%);
+            }
+            & button:nth-of-type(2) {
+                @include button($blue, 40%);
+            }
+        }
+
+        &__gallery--item {
+            width: 140px;
+            height: 140px;
+            margin-right: 65px;
+            margin-bottom: 70px;
+            &:nth-child(n+5) {
+                margin-bottom: 0;    
+            }
+            &:nth-child(5) {
+                margin-right: 0;   
+            }
+            & .sprite.circle {
+                left: 100%;
+            }
+            & img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
 }
+
+/* Tablet ----------- */
+@media screen and (max-width: 1024px) {
+        .review {
+        &__impression--radio div ~ div {
+            margin-top: 0;
+        }
+
+        &__photo {
+            @include pad(18px 0 8px 0);
+            & button:nth-of-type(1) {
+                @include button($gray-second, 60%);
+            }
+            & button:nth-of-type(2) {
+                @include button($blue, 60%);
+            }
+        }
+
+        &__gallery--item {
+            width: 140px;
+            height: 140px;
+            margin-right: 65px;
+            margin-bottom: 70px;
+            &:nth-child(n+3) {
+                margin-bottom: 0;    
+            }
+            &:nth-child(3n) {
+                margin-right: 0;   
+            }
+            & .sprite.circle {
+                left: 100%;
+            }
+            & img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    } 
+}
+
+/* Small ----------- */
+@media screen and (max-width : 480px) {
+    .review {
+        &__photo {
+            @include pad(18px 0 8px 0);
+            & button:nth-of-type(1) {
+                @include button($gray-second, 100%);
+            }
+            & button:nth-of-type(2) {
+                @include button($blue, 100%);
+            }
+        }
+        &__gallery--item {
+            width: 70px;
+            height: 70px;
+            margin-right: 35px;
+            margin-bottom: 70px;
+            &:nth-child(n+3) {
+                margin-bottom: 0;    
+            }
+            &:nth-child(3n) {
+                margin-right: 0;   
+            }
+            & .sprite.circle {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            & img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    } 
+
+}
+
+

@@ -5,6 +5,7 @@
     <title>Sedona-mobile</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'> -->
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
@@ -13,90 +14,108 @@
 <body>
     <header class="page-header">
         <div class="page-header__wrapper">
-            <nav class="page-nav">
-                <ul class="page-nav__list">
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Гостиницы</a></li>
+            <nav class="page-header__nav">
+                <ul class="page-header__list">
+                    <li><a class="page-header__item" href="#">Карта штата</a></li>
+                    <li><a class="page-header__item" href="#">Информация</a></li>
+                    <li><a class="page-header__item" href="#">Фото и видео</a></li>
+                    <li><a class="page-header__item" href="#">Гостиницы</a></li>
                 </ul>
-                <a href="#" class="page-nav__toggle"></a>
+                <a href="#" class="page-header__toggle"></a>
             </nav>
             <div class="page-header__logo">
                 <a href="#">
                     <img src="img/sedona-logo.png" alt="City of Sedona">
                 </a>
             </div>
-            <div class="page-header__banner form">
-                <div class="page-header__banner-picture">
-                    <img class="page-header__banner" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
-                </div>
+            <div class="page-header__banner page-header__banner--form">
+                <!-- <div class="page-header__banner-picture"> -->
+                <img class="page-header__banner-picture" src="img/sedona-banner.jpg" alt="Welcome to Sedona">
+                <!-- </div> -->
             </div>
         </div>
     </header>
     <main class="page-main">
         <div class="page-main__wrapper">
             <div class="post">
-                <header class="post__intro">
-                    <div class="intro__wrapper">
-                        <div class="blog__intro--text">
-                            <h1>Блог шерифа</h1>
-                            <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
-                        </div>
-                        <div class="marginalii">
-                            <a class="blog-item__when-happen" href="#">Позавчера</a>
-                            <a class="blog-item__what-happen" href="#">Происшествия</a>
-                        </div>
+                <div class="row">
+                    <div class="col ">
+                        <header class="post__intro">
+                            <div class="post__wrapper">
+                                <div class="post__intro--text">
+                                    <h1>Блог шерифа</h1>
+                                    <p>Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах.</p>
+                                </div>
+                                <div class="marginalii">
+                                    <a class="post__when-happen" href="#">Позавчера</a>
+                                    <a class="post__what-happen" href="#">Происшествия</a>
+                                </div>
+                            </div>
+                        </header>
                     </div>
-                </header>
-                <article class="post__content">
-                    <header class="post__content--header">
-                        <h1>Внимание! сбежала моя&nbsp;домашняя<br>анаконда</h1>
-                        <p>Жители Седоны и гости города,
-                            <br>будьте бдительны — Сбежала моя домашняя змея. Увидевшему
-                            <br>срочно звонить 911 и бежать от
-                            <br> нее подальше.</p>
-                    </header>
-                    <h2>Предыстория</h2>
-                    <p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
-                    <h2>Пропажа</h2>
-                    <p>Неделю назад я вернулся из Канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что
-                        <br> я и есть полиция, поэтому
-                        <br> отправился на поиски сам. особые приметы змеи:</p>
-                    <ul>
-                        <li>Длина: 5 метров</li>
-                        <li>Масса: 85 кг</li>
-                        <li>Окраска: серовато-зелёная</li>
-                    </ul>
-                    <p>Если вы увидите эту змею, сразу звоните 911 и бегите со всех ног от нее!</p>
-                    <h2>Предостережение</h2>
-                    <p>не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
-                    <blockquote>
-                        Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.
-                        <br>
-                        <cite>Адриано Челентано</cite>
-                    </blockquote>
-                </article>
-                <footer class="post__content--btn">
-                    <ul>
-                        <li><a class="" href="#">Пред.</a></li>
-                        <li><a class="" href="#">След.</a></li>
-                        <li><a class="" href="#">Назад к списку</a></li>
-                    </ul>
-                </footer>
+                </div>
+                <div class="row">
+                    <div class="col col col-xs-12 col-md-12 col-lg-12">
+                        <article class="post__content">
+                            <header class="post__content--header">
+                                <h1>Внимание! сбежала моя&nbsp;домашняя<br>анаконда</h1>
+                                <p>Жители Седоны и гости города,
+                                    <br>будьте бдительны — Сбежала моя домашняя змея. Увидевшему
+                                    <br>срочно звонить 911 и бежать от
+                                    <br> нее подальше.</p>
+                            </header>
+                            <h2>Предыстория</h2>
+                            <p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
+                            <h2>Пропажа</h2>
+                            <p>Неделю назад я вернулся из Канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что
+                                <br> я и есть полиция, поэтому
+                                <br> отправился на поиски сам. особые приметы змеи:</p>
+                            <ul>
+                                <li>Длина: 5 метров</li>
+                                <li>Масса: 85 кг</li>
+                                <li>Окраска: серовато-зелёная</li>
+                            </ul>
+                            <p>Если вы увидите эту змею, сразу звоните 911 и бегите со всех ног от нее!</p>
+                            <h2>Предостережение</h2>
+                            <p>не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
+                            <blockquote>
+                                Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.
+                                <br>
+                                <cite>Адриано Челентано</cite>
+                            </blockquote>
+                        </article>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col col-xs-12 col-md-12 col-lg-12">
+                        <footer class="post__content--btn">
+                            <ul>
+                                <li><a class="" href="#">Пред.</a></li>
+                                <li><a class="" href="#">След.</a></li>
+                                <li><a class="" href="#">Назад к списку</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <footer class="page-footer">
-        <div class="page-footer__wrapper">
+    <footer class="page-footer row">
+        <!-- <div class="page-footer__wrapper"> -->
+        <div class="col col-lg-4 col-md-4 col-xs-12">
             <a class="page-footer__visitsedona" href="#">#visitsedona</a>
-            <div class="social-links">
-                <a href="#" class="social-links__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
-                <a href="#" class="social-links__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
-                <a href="#" class="social-links__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
-            </div>
-            <a class="page-footer__made-by" href="#">Разработано<div class="sprite client"></div></a>
         </div>
+        <div class="col col-lg-4 col-md-4 col-xs-12">
+            <div class="page-footer__social">
+                <a href="#" class="page-footer__twitter"><i class="fa fa-twitter fa-2x"></i><span>&nbsp; twitter</span></a>
+                <a href="#" class="page-footer__facebook"><i class="fa fa-facebook fa-2x"></i><span>&nbsp; facebook</span></a>
+                <a href="#" class="page-footer__youtube"><i class="fa fa-youtube-play fa-2x"></i><span>&nbsp; youtube</span></a>
+            </div>
+        </div>
+        <div class="col col-lg-4 col-md-4 col-xs-12">
+            <a class="page-footer__made-by" href="#">Разработано<i class="sprite client"></i></a>
+        </div>
+        <!-- </div> -->
     </footer>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/toggle.js"></script>
